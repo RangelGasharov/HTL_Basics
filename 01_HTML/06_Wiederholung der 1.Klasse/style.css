@@ -1,0 +1,42 @@
+* {
+    margin: 0px;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.upper {
+    height: 70vh;
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    background: url(https://reiseziele.ch/wp-content/uploads/2015/07/alpen-Fedor-Selivanov-shutterstock_115483111-verwendet.jpg);
+}
+
+.lower {
+    height: 30vh;
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.div1_0 {
+    padding: 15px;
+}
+
+.lower {
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+}
+
+.div2_0 {
+    margin: 10px;
+    text-align: justify;
+    font-size: 20pt;
+}
+
+
+/*background: url(https://austria-forum.org/attach/AEIOU/Totes_Gebirge/Totes_Gebirge1.jpg);*/

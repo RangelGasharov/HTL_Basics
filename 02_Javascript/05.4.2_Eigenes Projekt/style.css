@@ -1,0 +1,99 @@
+    .title {
+        margin-top: 50px;
+        margin-bottom: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(55, 202, 141);
+    }
+    
+    body {
+        background-color: rgb(85, 85, 192);
+        margin: 0px;
+    }
+    
+    .control {
+        margin: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .container1 {
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #randomNumber {
+        background-color: white;
+        border: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+    }
+    
+    #firstword {
+        width: 19%;
+    }
+    
+    #finalword {
+        background-color: white;
+        border: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .title1 {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        border: black;
+    }
+    
+    .title2 {
+        background-color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #figure1 {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #figure2 {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #add {
+        background-color: rgb(31, 189, 31);
+    }
+    
+    #unit {
+        width: 11%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #wordList {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+        margin-left: 500px;
+        margin-right: 500px;
+    }

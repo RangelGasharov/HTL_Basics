@@ -1,0 +1,27 @@
+html {
+    background-color: aqua;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+}
+
+.box {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+}
+
+#output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-weight: 800;
+    font-size: 2em;
+}

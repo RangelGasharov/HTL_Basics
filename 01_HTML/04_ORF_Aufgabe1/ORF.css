@@ -1,0 +1,132 @@
+    .body {
+        background-color: rgb(211, 212, 209);
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    
+    .box {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        font-size: 14pt;
+        margin-top: auto;
+        margin-bottom: auto;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .container {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+    
+    .container1 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgb(173, 28, 28);
+    }
+    /*text-align: center */
+    /*align-items: center */
+    
+    .container2 {
+        width: 100%;
+        background-color: rgb(190, 33, 33);
+        display: flex;
+        flex: row;
+        height: 100px;
+    }
+    
+    .vorarlberg {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        font-size: 40pt;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 2%;
+    }
+    
+    .orflogo {
+        display: block;
+        margin-left: 0%
+    }
+    
+    .billjar-icon2 {
+        height: 40px;
+    }
+    
+    .container3 {
+        padding-left: 5%;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(173, 28, 28);
+    }
+    
+    .container4 {
+        margin-top: 0px;
+    }
+    
+    .ctestimage {
+        height: 506px;
+        margin-top: 0px;
+        background-image: url("GetImageAttachment.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    /*.ctest-image {
+        background-image: url("GetImageAttachment.jpg");
+        width: 1300px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    */
+    
+    .container5 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 8%;
+        padding-right: 8%;
+        background-color: white;
+        position: relative;
+        margin-left: 10%;
+        margin-right: 25%;
+        bottom: 115px;
+        width: 800px;
+    }
+    
+    .title1 {
+        padding-left: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: rgb(148, 141, 141);
+        font-size: 16pt;
+    }
+    
+    .undertitle1 {
+        padding-left: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 30pt;
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .text1 {
+        padding-left: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14pt;
+        font-weight: 600;
+    }
+    
+    .container6 {
+        margin-top: -200px;
+        margin-bottom: 0px;
+        background-color: white;
+        width: 1265px;
+        height: 100px;
+    }

@@ -39,6 +39,9 @@
         var diamonds;
         var bombs;
         var platforms;
+        var platforms2;
+        var platforms3;
+        var platforms4;
         var cursors;
         var score = 0;
         var gameOver = false;
@@ -49,6 +52,9 @@
         function preload() {
             this.load.image('sky', 'assets/sky.png');
             this.load.image('ground', 'assets/platform.png');
+            this.load.image('ground2', 'assets/platform2.png');
+            this.load.image('ground3', 'assets/platform3.png');
+            this.load.image('ground3', 'assets/platform4.png');
             this.load.image('diamond', 'assets/diamond.png');
             this.load.image('bomb', 'assets/bomb.png');
             this.load.spritesheet('dude', 'assets/dude.png', {
@@ -63,7 +69,6 @@
 
             //  The platforms group contains the ground and the 2 ledges we can jump on
             platforms = this.physics.add.staticGroup();
-
             //  Here we create the ground.
             //  Scale it to fit the width of the game (the original sprite is 400x32 in size)
             platforms.create(200, 700, 'ground').setScale(1).refreshBody();
@@ -82,7 +87,16 @@
             platforms.create(1000, 700, 'ground');
             platforms.create(1400, 700, 'ground');
 
+            platforms2 = this.physics.add.staticGroup();
 
+            platforms2.create(400, 600, 'ground2');
+            platforms2.create(920, 550, 'ground2');
+
+            platforms3 = this.physics.add.staticGroup();
+            platforms3.create(950, 330, 'ground3');
+
+            platforms4 = this.physics.add.staticGroup();
+            platforms4.create(950, 400, 'ground4');
 
 
             // The player and its settings
@@ -156,10 +170,25 @@
             this.physics.add.collider(diamonds, platforms);
             this.physics.add.collider(bombs, platforms);
 
+            this.physics.add.collider(player, platforms2, walkPlatform2, null, this);
+            this.physics.add.collider(diamonds, platforms2);
+            this.physics.add.collider(bombs, platforms2);
+
+            this.physics.add.collider(player, platforms3);
+            this.physics.add.collider(diamonds, platforms3);
+            this.physics.add.collider(bombs, platforms3);
+
+            this.physics.add.collider(player, platforms4, walkPlatform4, null, this);
+            this.physics.add.collider(diamonds, platforms4);
+            this.physics.add.collider(bombs, platforms4);
+
+
             //  Checks to see if the player overlaps with any of the diamonds, if he does call the collectDiamond function
             this.physics.add.overlap(player, diamonds, collectDiamond, null, this);
 
             this.physics.add.collider(player, bombs, hitBomb, null, this);
+
+
         }
 
         function update() {
@@ -220,6 +249,24 @@
             player.anims.play('turn');
 
             gameOver = true;
+        }
+
+        function walkPlatform2(player, platforms2) {
+
+            player.setVelocityY(-660);
+
+        }
+
+        function walkPlatform4(player, platforms4) {
+
+            this.physics.pause();
+
+            player.setTint(0xff0000);
+
+            player.anims.play('turn');
+
+            gameOver = true;
+
         }
     </script>
 

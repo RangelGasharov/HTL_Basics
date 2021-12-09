@@ -17,8 +17,8 @@
     <script type="text/javascript">
         var config = {
             type: Phaser.AUTO,
-            width: 1600, //800
-            height: 800, //600
+            width: 1540, //800   
+            height: 750, //600   //854
             physics: {
                 default: 'arcade',
                 arcade: {
@@ -59,21 +59,29 @@
 
         function create() {
             //  A simple background for our game
-            this.add.image(400, 300, 'sky');
+            this.add.image(800, 325, 'sky'); //400 //300 //.setOrigin(0,0)
 
             //  The platforms group contains the ground and the 2 ledges we can jump on
             platforms = this.physics.add.staticGroup();
 
             //  Here we create the ground.
             //  Scale it to fit the width of the game (the original sprite is 400x32 in size)
-            platforms.create(200, 550, 'ground').setScale(1).refreshBody();
+            platforms.create(200, 700, 'ground').setScale(1).refreshBody();
 
             //  Now let's create some ledges
-            platforms.create(600, 400, 'ground');
-            platforms.create(100, 450, 'ground');
-            platforms.create(00, 200, 'ground');
-            platforms.create(100, 300, 'ground');
-            platforms.create(700, 300, 'ground');
+            platforms.create(0, 150, 'ground');
+            platforms.create(200, 250, 'ground');
+            platforms.create(750, 300, 'ground');
+            platforms.create(650, 400, 'ground');
+            platforms.create(150, 450, 'ground');
+            platforms.create(600, 550, 'ground');
+            platforms.create(150, 600, 'ground');
+            platforms.create(600, 700, 'ground');
+            platforms.create(1000, 700, 'ground');
+            platforms.create(1400, 700, 'ground');
+
+
+
 
             // The player and its settings
             player = this.physics.add.sprite(100, 450, 'dude');
@@ -118,7 +126,7 @@
             //  Some diamonds to collect, 12 in total, evenly spaced 70 pixels apart along the x axis
             diamonds = this.physics.add.group({
                 key: 'diamond',
-                repeat: 11,
+                repeat: 20,
                 setXY: {
                     x: 12,
                     y: 0,

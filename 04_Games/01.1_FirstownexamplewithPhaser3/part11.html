@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Making your first Phaser 3 Game - Part 10</title>
+    <title>First own game with Phaser 3</title>
     <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
     <style type="text/css">
         body {
@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
 
 
     <style type="text/css">
@@ -56,7 +57,7 @@
         var score = 0;
         var gameOver = false;
         var scoreText;
-        var isJumping = false;
+        var isSpeedboosting = false;
 
         var game = new Phaser.Game(config);
 
@@ -119,10 +120,11 @@
             platforms5.create(680, 150, 'ground5');
 
             platforms6 = this.physics.add.staticGroup();
-            platforms6.create(590, 398, 'ground6');
-            platforms6.create(620, 398, 'ground6');
-            platforms6.create(650, 398, 'ground6');
-            platforms6.create(680, 398, 'ground6');
+            platforms6.create(590, 370, 'ground6');
+            platforms6.create(620, 370, 'ground6');
+            platforms6.create(650, 370, 'ground6');
+            platforms6.create(680, 370, 'ground6');
+            platforms6.create(710, 370, 'ground6');
 
             // The player and its settings
             player = this.physics.add.sprite(100, 450, 'dude');
@@ -207,13 +209,13 @@
             this.physics.add.collider(diamonds, platforms4);
             this.physics.add.collider(bombs, platforms4);
 
-            this.physics.add.collider(player, platforms5, walkPlatform5, null, this);
-            this.physics.add.collider(diamonds, platforms5);
-            this.physics.add.collider(bombs, platforms5);
+            this.physics.add.overlap(player, platforms5, walkPlatform5, null, this);
+            this.physics.add.overlap(diamonds, platforms5);
+            this.physics.add.overlap(bombs, platforms5);
 
-            this.physics.add.collider(player, platforms6, walkPlatform6, null, this);
-            this.physics.add.collider(diamonds, platforms6);
-            this.physics.add.collider(bombs, platforms6);
+            this.physics.add.overlap(player, platforms6, walkPlatform6, null, this);
+            this.physics.add.overlap(diamonds, platforms6);
+            this.physics.add.overlap(bombs, platforms6);
 
             //  Checks to see if the player overlaps with any of the diamonds, if he does call the collectDiamond function
             this.physics.add.overlap(player, diamonds, collectDiamond, null, this);
@@ -237,7 +239,7 @@
 
                 player.anims.play('right', true);
             } else {
-                if (!isJumping) {
+                if (!isSpeedboosting) {
                     player.setVelocityX(0);
 
                     player.anims.play('turn');
@@ -288,13 +290,13 @@
 
 
         function walkPlatform(player, platforms) {
-            isJumping = false;
+            isSpeedboosting = false;
 
 
         }
 
         function walkPlatform2(player, platforms2) {
-            isJumping = false;
+            isSpeedboosting = false;
             player.setVelocityY(-660);
 
 
@@ -303,7 +305,7 @@
 
 
         function walkPlatform4(player, platforms4) {
-            isJumping = false;
+            isSpeedboosting = false;
             this.physics.pause();
             player.setTint(0xff0000);
             player.anims.play('turn');
@@ -314,13 +316,13 @@
 
 
         function walkPlatform5(player, platforms5) {
-            isJumping = true;
-            player.setVelocityX(-400);
+            isSpeedboosting = true;
+            player.setVelocityX(-660);
         }
 
         function walkPlatform6(player, platforms6) {
-            isJumping = true;
-            player.setVelocityX(400);
+            isSpeedboosting = true;
+            player.setVelocityX(660);
         }
 
 

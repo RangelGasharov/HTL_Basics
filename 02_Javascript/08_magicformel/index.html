@@ -6,17 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Magische Formel</title>
 </head>
 
 <body>
     <div class="wrapper">
         <div class="inputandoutputs">
-            <input type="text" name="" id="Größe" placeholder="Größe">
-            <input type="text" name="" id="Gewicht" placeholder="Gewicht">
-            <button onclick="generatebmi()">Generieren</button>
-            <div id="Ausgabewert">...</div>
+            <div class="input">
+                <input type="text" name="" id="size" placeholder="Größe">
+                <input type="text" name="" id="weight" placeholder="Gewicht">
+                <button onclick="generatebmi()" class="buttonBMI">Generieren</button>
+            </div>
+            <div id="output"></div>
 
         </div>
     </div>

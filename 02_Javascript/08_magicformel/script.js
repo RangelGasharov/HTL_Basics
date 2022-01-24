@@ -3,7 +3,6 @@ function generatebmi() {
     let value1 = document.getElementById("size").value;
     let value2 = document.getElementById("weight").value;
     let result = (value1 / value2) - 3.4;
-    Math.floor(result, -1)
     console.log(result)
     printvalues(result)
 }
@@ -21,9 +20,9 @@ function printvalues(result) {
     } else if (result < 0) {
         let j = "";
         for (i = 0; i > result; i--) {
-            j += i + "<br>";
+            j += i - 1 + "<br>";
             document.getElementById("output").innerHTML = "Negativ" + " " +
-                j + " (" + result + ") ";
+                "0 " + j + " (" + result + ") ";
             console.log(i)
         }
     } else {

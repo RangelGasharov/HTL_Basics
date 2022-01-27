@@ -14,15 +14,17 @@ function printvalues(result) {
         for (let i = 0; i < result; i++) {
             j += i + "<br>";
             document.getElementById("output").innerHTML = "Positiv" + " " +
-                j + " (" + result + ") ";
+                j;
             console.log(i)
+            console.log(result);
         }
     } else if (result < 0) {
         let j = "";
         for (i = 0; i > result; i--) {
             j += i + "<br>";
-            document.getElementById("output").innerHTML = "Negativ" + " " + j + " (" + result + ") ";
-            console.log(i)
+            document.getElementById("output").innerHTML = "Negativ" + " " + j;
+            onsole.log(i);
+            console.log(result);
         }
     } else {
         document.getElementById("output").innerHTML = "NULL" + " " + 0;

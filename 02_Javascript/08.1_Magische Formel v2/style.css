@@ -1,0 +1,43 @@
+body {
+    background-color: orangered;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 5px;
+    background-color: brown;
+    display: flex;
+    /* flex-direction: row;*/
+}
+
+#output {
+    background-color: white;
+    height: 100px;
+    width: 60px;
+}
+
+#size {
+    margin: 3px;
+    width: 50%;
+}
+
+#weight {
+    margin: 3px;
+    width: 50%;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+#executecalculation {
+    width: 50%;
+    margin: 3px;
+}

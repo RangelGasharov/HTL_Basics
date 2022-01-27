@@ -20,9 +20,8 @@ function printvalues(result) {
     } else if (result < 0) {
         let j = "";
         for (i = 0; i > result; i--) {
-            j += i - 1 + "<br>";
-            document.getElementById("output").innerHTML = "Negativ" + " " +
-                "0 " + j + " (" + result + ") ";
+            j += i + "<br>";
+            document.getElementById("output").innerHTML = "Negativ" + " " + j + " (" + result + ") ";
             console.log(i)
         }
     } else {

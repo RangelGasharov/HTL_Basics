@@ -1,3 +1,7 @@
+document.getElementById("buttonBMI").addEventListener("click", function()) {
+    generatebmi();
+}
+
 function generatebmi() {
 
     let value1 = document.getElementById("size").value;

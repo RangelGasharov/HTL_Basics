@@ -1,4 +1,7 @@
-document.getElementById("executecalculation").addEventListener("click", calculate)
+document.getElementById("executecalculation").addEventListener("click", function() {
+    calculate();
+});
+
 
 function calculate() {
     let value1 = document.getElementById("size").value;
@@ -14,18 +17,25 @@ function printValues(resultRounded) {
     if (resultRounded > 0) {
         let j = "Positiv ";
         for (let i = 0; i <= resultRounded; i++) {
-            j += i + "<br>";
+
+            let seperator = ", ";
+            if (i == 0) {
+                seperator = "";
+            }
+            j += seperator + i;
             document.getElementById("output").innerHTML = j;
             console.log(i)
-            console.log(resultRounded);
         }
     } else if (resultRounded < 0) {
         let j = "Negativ ";
         for (i = 0; i >= resultRounded; i--) {
-            j += i + "<br>";
+            let seperator = ", ";
+            if (i == 0) {
+                seperator = "";
+            }
+            j += seperator + i;
             document.getElementById("output").innerHTML = j;
             console.log(i);
-            console.log(resultRounded);
         }
     } else {
         let j = "NULL ";

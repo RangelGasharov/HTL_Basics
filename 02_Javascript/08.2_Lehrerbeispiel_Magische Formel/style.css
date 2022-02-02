@@ -1,0 +1,22 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    background-color: brown;
+    display: flex;
+    width:350px;
+    padding:25px;
+}
+
+.fields{
+    flex-direction: column;
+    margin-right: 15px;
+}
+.output{
+    background-color: white;
+    width:100%;
+}

@@ -33,13 +33,14 @@ body {
     border: black solid;
 }
 
-.outputs {
+#outputs {
     background-color: lightblue;
     height: 150px;
     width: 250px;
     overflow: auto;
     border: black solid;
     overflow: auto;
+    padding: 10px;
 }
 
 .bottom {

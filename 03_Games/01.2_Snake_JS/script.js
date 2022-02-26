@@ -95,16 +95,20 @@ function gameLoop() {
 }
 
 function keyDown(e) {
-    if (e.keyCode == 37) {
+    if (e.keyCode == 37 ||
+        e.keyCode == 65) { //A
         direction = 'LEFT';
     }
-    if (e.keyCode == 38) {
+    if (e.keyCode == 38 ||
+        e.keyCode == 87) { //W
         direction = 'UP';
     }
-    if (e.keyCode == 39) {
+    if (e.keyCode == 39 ||
+        e.keyCode == 68) { //D
         direction = 'RIGHT';
     }
-    if (e.keyCode == 40) {
+    if (e.keyCode == 40 ||
+        e.keyCode == 83) { //S
         direction = 'DOWN';
     }
 };

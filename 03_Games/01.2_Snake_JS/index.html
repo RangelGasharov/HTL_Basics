@@ -7,17 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="wrapper">
+        <div class="container1">
+            <canvas id="canvas" width="1200" height="600"></canvas>
+            <div class="title">Snake-Game</div>
+        </div>
 
+        <div class="container2">
+            <div class="undertitle1">Response in ms (higher = slower)</div>
+            <div class="box1">
+                <input type="text" id="speedsnake">
+                <button id="button1">Confirm</button>
+            </div>
+            <div class="box2">
+                <div class="undertitle2"> Press p to pause</div>
+            </div>
 
+            <div class="box3">
+                <div class="undertitle3"> Choose the snake colour (e.g. yellow, green, blue)</div>
+            </div>
 
+            <div class="box4">
+                <div class="undertitle4"> Choose the background colour (e.g. black, red, brown, orange)</div>
+            </div>
+        </div>
 
-    <canvas id="canvas" width="720" height="480"></canvas>
-
-
-
+    </div>
 
 
 </body>

@@ -1,19 +1,24 @@
+document.getElementById("button1").addEventListener("click", function() {
+
+});
+
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
-let rows = 20;
-let cols = 30;
-let snake = [{ x: 29, y: 0 }];
+let rows = 30; //20
+let cols = 60; //30
+let snake = [{ x: 59, y: 0 }];
 let food = { x: 4, y: 5 };
-canvas.widht = 720;
-canvas.height = 480;
+canvas.widht = 1200; //720
+canvas.height = 600; //480
 let cellWidht = canvas.widht / cols;
 let cellHeight = canvas.height / rows;
 let direction = 'LEFT';
 let foodCollected = false;
+let speedsnake = 75;
 
 placeFood();
 
-setInterval(gameLoop, 100);
+setInterval(gameLoop, speedsnake);
 document.addEventListener('keydown', keyDown);
 
 draw();
@@ -44,7 +49,7 @@ function testGameOver() {
         snake[0].y > rows - 1 ||
         duplicatePart) {
         placeFood();
-        snake = [{ x: 29, y: 0 }];
+        snake = [{ x: 59, y: 0 }];
         direction = 'LEFT'
     }
 }
@@ -87,6 +92,9 @@ function gameLoop() {
     if (direction == 'RIGHT') { snake[0].x++; }
     if (direction == 'UP') { snake[0].y--; }
     if (direction == 'DOWN') { snake[0].y++; }
+    if (direction == 'STOP') {
+        snake[1].x++ && snake[1].y++;
+    }
     if (snake[0].x == food.x && snake[0].y == food.y) {
         foodCollected = true;
 
@@ -111,6 +119,10 @@ function keyDown(e) {
         e.keyCode == 83) { //S
         direction = 'DOWN';
     }
+    if (e.keyCode == 80) { //P
+        direction = 'STOP';
+    }
+
 };
 
 

@@ -1,6 +1,7 @@
-document.getElementById("buttonBMI").addEventListener("click", function()) {
+document.getElementById("buttonBMI").addEventListener("click", function() {
     generatebmi();
-}
+});
+
 
 function generatebmi() {
 

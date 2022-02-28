@@ -63,6 +63,8 @@ function testGameOver() {
     }
 }
 
+
+
 function placeFood() {
     let randomX = Math.floor(Math.random() * cols);
     let randomY = Math.floor(Math.random() * rows);

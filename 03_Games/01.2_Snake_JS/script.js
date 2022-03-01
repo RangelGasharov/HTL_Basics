@@ -57,6 +57,9 @@ function testGameOver() {
         snake[0].y < 0 ||
         snake[0].y > rows - 1 ||
         duplicatePart) {
+        score = 0;
+        console.log(score);
+        printScore(score);
         placeFood();
         snake = [{ x: cols - 1, y: 0 }];
         direction = 'LEFT'

@@ -1,12 +1,7 @@
-document.getElementById("button1").addEventListener("click", function() {
-    let speedsnake = changeSpeed();
-    console.log(speedsnake);
-});
-
 let canvas = document.getElementById('canvas');
 let ctx = canvas.getContext('2d');
-let rows = 30; //15 //30 //60 (//20)
-let cols = 60; //30 //60 //120 (//30)
+let rows = 20; //10 15 20 30 60   (//20)
+let cols = 40; //20 30 40 60 120  (//30)
 let snake = [{ x: cols - 1, y: 0 }];
 let food = { x: 4, y: 5 };
 canvas.widht = 1200; //720
@@ -16,17 +11,17 @@ let cellHeight = canvas.height / rows;
 let direction = 'LEFT';
 let foodCollected = false;
 let score = 0;
-let speedsnake = 100;
+const scorepoints = 10;
+let speedsnake = 75;
 
-function changeSpeed() {
+
+document.getElementById("button1").addEventListener("click", function() {
     let speedsnake = document.getElementById("speedsnake").value;
-    return speedsnake;
-
-}
+    console.log("Current snakespeed: " + speedsnake);
+});
 
 
 placeFood();
-
 setInterval(gameLoop, speedsnake);
 document.addEventListener('keydown', keyDown);
 
@@ -112,8 +107,11 @@ function gameLoop() {
     if (snake[0].x == food.x && snake[0].y == food.y) {
         foodCollected = true;
         placeFood();
-        score += 10;
-        console.log(score);
+        score += scorepoints;
+        if (score == rows * cols * scorepoints) {
+            alert("Congrats, you have won!")
+        }
+        console.log("Current-score: " + score);
         printScore(score);
     }
 }
@@ -128,6 +126,7 @@ function keyDown(e) {
         e.keyCode == 65) { //A
         direction = 'LEFT';
     }
+
     if (e.keyCode == 38 ||
         e.keyCode == 87) { //W
         direction = 'UP';

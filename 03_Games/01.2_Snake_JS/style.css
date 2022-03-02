@@ -23,6 +23,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 20vh;
+    border: 10px rgb(5, 3, 100) solid;
     text-align: center;
     background-color: darkblue;
     font-size: 40pt;
@@ -33,7 +34,8 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: cornflowerblue;
+    background-color: rgb(37, 93, 196);
+    border: 5px rgb(15, 62, 150) solid;
 }
 
 .undertitle1 {
@@ -50,6 +52,8 @@ body {
 
 #button1 {
     width: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
 }
 
 #snakecolour {
@@ -58,6 +62,8 @@ body {
 
 #button2 {
     width: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
 }
 
 #backgroundcolour {
@@ -66,6 +72,13 @@ body {
 
 #button3 {
     width: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.inputs1 {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .box1 {
@@ -101,7 +114,7 @@ body {
 .inputs2 {
     margin-top: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .box4 {
@@ -117,7 +130,7 @@ body {
 .inputs3 {
     margin-top: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .undertitle2 {

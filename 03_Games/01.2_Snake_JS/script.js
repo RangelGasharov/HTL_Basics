@@ -31,7 +31,33 @@ draw();
 function draw() {
     ctx.fillStyle = 'black';
     ctx.fillRect(0, 0, canvas.widht, canvas.height)
-    ctx.fillStyle = 'red';
+    ctx.fillStyle = 'rgb(255,0,0)'; //'red'
+
+    if (score >= 30 && score < 60) {
+        ctx.fillStyle = 'rgb(255,42,0)';
+    } else if (score >= 60 && score < 90) {
+        ctx.fillStyle = 'rgb(255,85,0)';
+    } else if (score >= 90 && score < 120) {
+        ctx.fillStyle = 'rgb(255,85,0)';
+    } else if (score >= 120 && score < 150) {
+        ctx.fillStyle = 'rgb(255,128,0)';
+    } else if (score >= 150 && score < 180) {
+        ctx.fillStyle = 'rgb(255,170,0)';
+    } else if (score >= 180 && score < 210) {
+        ctx.fillStyle = 'rgb(255,213,0)';
+    } else if (score >= 210 && score < 240) {
+        ctx.fillStyle = 'rgb(255,255,0)';
+    } else if (score >= 240 && score < 270) {
+        ctx.fillStyle = 'rgb(212,255,0)';
+    } else if (score >= 270 && score < 300) {
+        ctx.fillStyle = 'rgb(170,255,0)';
+    } else if (score >= 300 && score < 330) {
+        ctx.fillStyle = 'rgb(128,255,0)';
+    } else if (score >= 330 && score < 360) {
+        ctx.fillStyle = 'rgb(85,255,0)';
+    } else if (score >= 360 && score < 390) {
+        ctx.fillStyle = 'rgb(43,255,0)';
+    }
 
     snake.forEach(part => add(part.x, part.y));
 
@@ -96,14 +122,15 @@ function gameLoop() {
     }
 
     shiftSnake();
-
+    if (direction == 'STOP') {
+        snake[1].x++
+            snake[1].y++
+    }
     if (direction == 'LEFT') { snake[0].x--; }
     if (direction == 'RIGHT') { snake[0].x++; }
     if (direction == 'UP') { snake[0].y--; }
     if (direction == 'DOWN') { snake[0].y++; }
-    if (direction == 'STOP') {
-        snake[1].x++ && snake[1].y++;
-    }
+
     if (snake[0].x == food.x && snake[0].y == food.y) {
         foodCollected = true;
         placeFood();

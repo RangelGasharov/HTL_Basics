@@ -1,4 +1,5 @@
 document.getElementById("startProcess1").addEventListener("click", function() {
+    pointreached1 = false;
     calculateNumber1()
 });
 
@@ -24,21 +25,26 @@ function calculateNumber1() {
         alert('Please, specify the value of the slope!')
     }
 
+    let propabilitypoint1 = document.getElementById("propabilitypoint1").value;
+    if (propabilitypoint1 == '') {
+        alert('Please, specify range of propability!')
+    }
+
     while (!pointreached1) {
         let propability = Math.random() * 100;
         console.log("Current value1: " + value1)
         console.log("Number of rounds: " + processnumber)
         console.log("Propability-rate: " + propability)
 
-        if (propability < 55 && value1 > pointtoreach1) {
+        if (propability < propabilitypoint1 && value1 > pointtoreach1) {
             value1 = value1 * (1 - (slope1 / 100))
             processnumber = processnumber + 1;
-        } else if (propability > 55 && value1 > pointtoreach1) {
+        } else if (propability > propabilitypoint1 && value1 > pointtoreach1) {
             value1 = value1 * (1 + (slope1 / 100))
         } else if (value1 <= pointtoreach1) {
             pointreached1 = true;
             console.log("The endpoint was reached!")
         }
-
+        document.getElementById("outputs1").innerHTML = processnumber;
     }
 }

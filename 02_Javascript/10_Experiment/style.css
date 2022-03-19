@@ -1,3 +1,29 @@
 body {
     margin: 0;
 }
+
+#inputs1 {
+    display: flex;
+    justify-content: center;
+}
+
+#slope1 {
+    width: 15%;
+}
+
+#value1 {
+    width: 15%;
+}
+
+#pointtoreach1 {
+    width: 15%;
+}
+
+#propabilitypoint1 {
+    width: 15%;
+}
+
+#outputs1 {
+    display: flex;
+    background-color: beige;
+}

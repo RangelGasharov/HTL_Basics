@@ -2,25 +2,37 @@ body {
     margin: 0;
 }
 
+#container1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 #inputs1 {
     display: flex;
     justify-content: center;
 }
 
-#slope1 {
-    width: 15%;
+#outputs2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
-#value1 {
-    width: 15%;
+#slope1 {
+    width: 20%;
+}
+
+#beginingvalue1 {
+    width: 20%;
 }
 
 #pointtoreach1 {
-    width: 15%;
+    width: 20%;
 }
 
 #propabilitypoint1 {
-    width: 15%;
+    width: 20%;
 }
 
 #outputs1 {

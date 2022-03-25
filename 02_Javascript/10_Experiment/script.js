@@ -4,15 +4,15 @@ document.getElementById("startProcess1").addEventListener("click", function() {
 });
 
 document.getElementById("startProcess2").addEventListener("click", function() {
+    pointreached1 = false;
     calculateNumber1()
 });
 
 let pointreached1 = false;
 
-
 function calculateNumber1() {
-    let value1 = document.getElementById("value1").value;
-    if (value1 == '') {
+    let beginingvalue1 = document.getElementById("beginingvalue1").value;
+    if (beginingvalue1 == '') {
         alert('Please, specify the starting value!')
     }
     let pointtoreach1 = document.getElementById("pointtoreach1").value;
@@ -31,17 +31,17 @@ function calculateNumber1() {
 
     while (!pointreached1) {
         let propability = Math.random() * 100;
-        console.log("Current value: " + value1)
+        console.log("Current value: " + beginingvalue1)
         console.log("Number of rounds: " + processnumber)
         console.log("Propability-rate: " + propability)
 
-        if (value1 > pointtoreach1 && propability < propabilitypoint1) {
-            value1 = value1 * (1 - (slope1 / 100))
+        if (propability < propabilitypoint1 && beginingvalue1 > pointtoreach1) {
+            beginingvalue1 = beginingvalue1 * (1 - (slope1 / 100))
             processnumber = processnumber + 1;
-        } else if (value1 > pointtoreach1 && propability > propabilitypoint1) {
-            value1 = value1 * (1 + (slope1 / 100))
+        } else if (propability > propabilitypoint1 && beginingvalue1 > pointtoreach1) {
+            beginingvalue1 = beginingvalue1 * (1 + (slope1 / 100))
             processnumber = processnumber + 1;
-        } else if (value1 <= pointtoreach1) {
+        } else if (beginingvalue1 <= pointtoreach1) {
             pointreached1 = true;
             console.log("The endpoint was reached!")
         }

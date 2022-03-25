@@ -18,4 +18,9 @@ function deleteLast() {
 
 }
 
+function clearAll() {
+    let container = document.getElementById("resultArea");
+    container.innerHTML = container.innerHTML.slice(0, 0)
+}
+
 //https: //www.youtube.com/watch?v=58gAY0cbgek

@@ -14,22 +14,21 @@
 
     <div class="title1">Calculator</div>
 
-    <div id="resultArea">
-    </div>
+    <div id="resultArea"></div>
 
     <table class="table1">
 
         <tr>
-            <td onclick="appendOperation(Math.E)">e</td>
-            <td onclick="appendOperation(Math.PI)">π</td>
-            <td></td>
+            <td onclick="appendOperation('(')">(</td>
+            <td onclick="appendOperation(')')">)</td>
+            <td onclick="clearAll()">CLEAR</td>
             <td onclick="deleteLast()"> DEL</td>
         </tr>
 
         <tr>
-            <td onclick="appendOperation('(')">(</td>
-            <td onclick="appendOperation(')')">)</td>
-            <td></td>
+            <td onclick="appendOperation(Math.E)">e</td>
+            <td onclick="appendOperation(Math.PI)">π</td>
+            <td onclick="appendOperation(1.618033988749895)">Φ</td>
             <td class=" highlight " onclick="appendOperation( ' ** ') ">^</td>
         </tr>
 

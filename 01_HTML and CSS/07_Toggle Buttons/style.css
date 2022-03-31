@@ -1,0 +1,42 @@
+input[type="checkbox"].toggle {
+    opacity: 0;
+    position: absolute;
+}
+
+input[type="checkbox"].toggle+label {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"].toggle+label::before {
+    content: "";
+    width: 2em;
+    height: 1em;
+    background-color: hsl(0, 80%, 90%);
+    border-radius: 1em;
+    margin-left: 0.25em;
+}
+
+input[type="checkbox"].toggle+label::after {
+    position: absolute;
+    left: 0.1em;
+    content: "";
+    width: 0.9em;
+    height: 0.9em;
+    background-color: hsl(0, 80%, 60%);
+    border-radius: 1em;
+    margin-left: 0.25em;
+}
+
+input[type="checkbox"].toggle:checked+label::after {
+    transform: translateX(100%);
+    background-color: hsl(100, 60%, 60%);
+}
+
+input[type="checkbox"].toggle:checked+label {
+    color: red;
+}
+
+
+/*https://www.youtube.com/watch?v=N8BZvfRD_eU*/

@@ -7,20 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search bar with JS</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <div class="search-wrapper">
         <label for="search">Search Users</label>
-        <input type="search" id="search">
+        <input type="search" id="search" data-search>
     </div>
 
-    <div class="user-cards">
+    <div class="user-cards" data-user-cards-container></div>
+
+    <template data-user-template>
         <div class="card">
-            <div class="header">my name</div>
-            <div class="body">email@gmail.com</div>
+            <div class="header" data-header></div>
+            <div class="body" data-body></div>
         </div>
-    </div>
+    </template>
 
 </body>
 

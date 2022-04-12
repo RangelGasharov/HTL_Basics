@@ -1,7 +1,44 @@
+.title1_1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: rgb(21, 99, 188);
+    padding: 10px;
+}
+
+.title1_2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    background-color: rgb(10, 24, 132);
+    padding: 10px;
+}
+
 #outputs1 {
-    height: 2rem;
+    color: rgb(255, 252, 179);
+    background-color: rgb(75, 141, 216);
+    padding: 1rem;
 }
 
 #outputs2 {
-    height: 2rem;
+    color: rgb(255, 252, 179);
+    background-color: rgb(13, 31, 173);
+    padding: 1rem;
+}
+
+#box1 {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+#box2 {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+#container1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

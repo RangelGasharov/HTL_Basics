@@ -27,8 +27,64 @@ body {
     background-color: black;
 }
 
-#xValueTitle1 {
+#xValueBox1 {
     background-color: rgb(0, 100, 0);
+}
+
+#xValueTitle1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+}
+
+.inputXValues1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
+}
+
+#startValueX1 {
+    width: 50%;
+    border-radius: 5px;
+    background-color: rgb(26, 153, 26);
+}
+
+#startValueX1::placeholder {
+    color: white;
+    text-align: center;
+}
+
+#endValueX1 {
+    width: 50%;
+    border-radius: 5px;
+    background-color: rgb(26, 153, 26);
+}
+
+#endValueX1::placeholder {
+    color: white;
+    text-align: center;
+}
+
+#stepValueX1 {
+    width: 50%;
+    border-radius: 5px;
+    background-color: rgb(26, 153, 26);
+}
+
+#stepValueX1::placeholder {
+    color: white;
+    text-align: center;
+}
+
+#commitXValues1 {
+    width: 50%;
+    border-radius: 5px;
+    background-color: rgb(3, 78, 3);
+    color: white;
+    margin-top: 5%;
 }
 
 #yValueTitle1_1 {

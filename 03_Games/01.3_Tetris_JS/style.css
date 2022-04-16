@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+}
+
+.wrapper {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.box1 {
+    margin-bottom: 0px;
+    height: 100vh;
+}
+
+#score {
+    margin-top: 45px;
+    background-color: black;
+    color: white;
+    font-size: xx-large;
+    width: 300px;
+    text-align: center;
+}

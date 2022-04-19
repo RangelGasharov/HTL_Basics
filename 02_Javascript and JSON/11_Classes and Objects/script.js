@@ -8,7 +8,7 @@ class House {
         /*this.postalCode = postalCode
         this.city = city
         this.street = street*/
-        this.location = `${ postalCode } ${ city } ${ street }`
+        this.location = `${postalCode} ${city} ${street}`
 
         if (gardenAvailability) {
             n += 1
@@ -52,3 +52,26 @@ console.table(houseObject3)
 console.log(houseObject3.getFurniture())
 console.table(houseOwner3)
 console.log("-------------------------------------------------")
+
+class Mammal {
+    constructor(name, age) {
+        this.name = name
+        this.age = age
+    }
+}
+
+class Cat extends Mammal {
+    meow() {
+    }
+}
+
+class Dog extends Mammal {
+    bark() {
+    }
+}
+
+let pet1 = new Cat("Felix", 3)
+let pet2 = new Dog("Max", 4)
+
+console.log(pet1)
+console.log(pet2)

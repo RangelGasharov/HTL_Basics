@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper1 {
+    position: relative;
+    display: inline-block;
+}
+
+.container1 {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+}
+
+.box1_1 {
+    background-color: red;
+    height: 30px;
+    width: 100%;
+}
+
+.HealthBoxPlayer {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    height: 30px;
+    width: 100%;
+}
+
+.coverHealth_1 {
+    position: absolute;
+    background: blue;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.box1_2 {
+    background-color: orange;
+    height: 100px;
+    width: 100px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.HealthBoxEnemy {
+    position: relative;
+    height: 30px;
+    width: 100%;
+}
+
+.box1_3 {
+    background-color: red;
+    height: 30px;
+}
+
+.coverHealth_2 {
+    position: absolute;
+    background: blue;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.shieldTie {
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+}

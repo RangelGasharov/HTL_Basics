@@ -8,15 +8,15 @@ c.fillRect(0, 0, canvas.width, canvas.height)
 const gravity = 0.7
 
 const background = new Sprite({
-    position:{
+    position: {
         x: 0,
-        y:0
+        y: 0
     },
     imageSrc: './img/background.png'
 })
 
 const shop = new Sprite({
-    position:{
+    position: {
         x: 600,
         y: 128
     },
@@ -38,6 +38,35 @@ const player = new Fighter({
     offset: {
         x: 0,
         y: 0
+    },
+    imageSrc: './img/SamuraiMack/Idle.png',
+    framesMax: 8,
+    scale: 2.5,
+    offset: {
+        x: 215,
+        y: 157
+    },
+    sprites: {
+        idle: {
+            imageSrc: './img/SamuraiMack/Idle.png',
+            framesMax: 8
+        },
+        run: {
+            imageSrc: './img/SamuraiMack/Run.png',
+            framesMax: 8
+        },
+        jump: {
+            imageSrc: './img/SamuraiMack/Jump.png',
+            framesMax: 2
+        },
+        fall: {
+            imageSrc: './img/SamuraiMack/Fall.png',
+            framesMax: 2
+        },
+        attack1: {
+            imageSrc: './img/SamuraiMack/Attack1.png',
+            framesMax: 6
+        }
     }
 })
 
@@ -53,6 +82,35 @@ const enemy = new Fighter({
     offset: {
         x: -50,
         y: 0
+    },
+    imageSrc: './img/kenji/Idle.png',
+    framesMax: 4,
+    scale: 2.5,
+    offset: {
+        x: 215,
+        y: 170
+    },
+    sprites: {
+        idle: {
+            imageSrc: './img/kenji/Idle.png',
+            framesMax: 4
+        },
+        run: {
+            imageSrc: './img/kenji/Run.png',
+            framesMax: 8
+        },
+        jump: {
+            imageSrc: './img/kenji/Jump.png',
+            framesMax: 2
+        },
+        fall: {
+            imageSrc: './img/kenji/Fall.png',
+            framesMax: 2
+        },
+        attack1: {
+            imageSrc: './img/kenji/Attack1.png',
+            framesMax: 4
+        }
     }
 })
 
@@ -81,33 +139,54 @@ function animate() {
     c.fillRect(0, 0, canvas.width, canvas.height)
     background.update()
     shop.update()
-
     player.update()
     enemy.update()
 
     player.velocity.x = 0
+    enemy.velocity.x = 0
 
 
     if (keys.a.pressed && player.lastKey === "a") {
         player.velocity.x = -5
+        player.switchSprite("run")
     } else if (keys.d.pressed && player.lastKey === "d") {
         player.velocity.x = 5
+        player.switchSprite("run")
+    } else {
+        player.switchSprite("idle")
     }
 
-    enemy.velocity.x = 0
+    if (player.velocity.y < 0) {
+        player.switchSprite("jump")
+    } else if (player.velocity.y > 0) {
+        player.switchSprite("fall")
+    }
+
 
     if (keys.ArrowLeft.pressed && enemy.lastKey === "ArrowLeft") {
         enemy.velocity.x = -5
+        enemy.switchSprite("run")
     } else if (keys.ArrowRight.pressed && enemy.lastKey === "ArrowRight") {
         enemy.velocity.x = 5
+        enemy.switchSprite("run")
+    } else {
+        enemy.switchSprite("idle")
     }
+
+    if (enemy.velocity.y < 0) {
+        enemy.switchSprite("jump")
+    } else if (enemy.velocity.y > 0) {
+        enemy.switchSprite("fall")
+    }
+
 
     if (
         rectangularCollision({
             rectangle1: player,
             rectangle2: enemy
         }) &&
-        player.isAttacking) {
+        player.isAttacking
+    ) {
         player.isAttacking = false
         enemy.health -= 20
         document.querySelector('#enemyHealth').style.width = enemy.health + "%"
@@ -148,7 +227,9 @@ window.addEventListener("keydown", (event) => {
         case " ":
             player.attack()
             break
+    }
 
+    switch (event.key) {
         case "ArrowRight":
             keys.ArrowRight.pressed = true
             enemy.lastKey = "ArrowRight"
@@ -185,5 +266,5 @@ window.addEventListener("keyup", (event) => {
     }
 })
 
-//50:30 //1:05:55
+//50:30; 1:05:55; 2:23:00; 2:48:50;
 //https://www.youtube.com/watch?v=vyqbNFMDRGQ

@@ -66,7 +66,23 @@ const player = new Fighter({
         attack1: {
             imageSrc: './img/SamuraiMack/Attack1.png',
             framesMax: 6
+        },
+        takeHit: {
+            imageSrc: './img/SamuraiMack/Take Hit - white silhouette.png',
+            framesMax: 4
+        },
+        death: {
+            imageSrc: './img/SamuraiMack/Death.png',
+            framesMax: 6
         }
+    },
+    attackBox: {
+        offset: {
+            x: 40,
+            y: 50
+        },
+        width: 220,
+        height: 50
     }
 })
 
@@ -110,7 +126,23 @@ const enemy = new Fighter({
         attack1: {
             imageSrc: './img/kenji/Attack1.png',
             framesMax: 4
-        }
+        },
+        takeHit: {
+            imageSrc: './img/kenji/Take hit.png',
+            framesMax: 3
+        },
+        death: {
+            imageSrc: './img/kenji/Death.png',
+            framesMax: 7
+          }
+    },
+    attackBox: {
+        offset: {
+            x: -170,
+            y: 50
+        },
+        width: 200,
+        height: 50
     }
 })
 
@@ -179,29 +211,41 @@ function animate() {
         enemy.switchSprite("fall")
     }
 
-
     if (
         rectangularCollision({
             rectangle1: player,
             rectangle2: enemy
         }) &&
-        player.isAttacking
+        player.isAttacking &&
+        player.framesCurrent === 4
     ) {
+        enemy.takeHit()
         player.isAttacking = false
-        enemy.health -= 20
         document.querySelector('#enemyHealth').style.width = enemy.health + "%"
     }
+
+    if (player.isAttacking && player.framesCurrent === 4) {
+        player.isAttacking = false
+    }
+
 
     if (
         rectangularCollision({
             rectangle1: enemy,
             rectangle2: player
         }) &&
-        enemy.isAttacking) {
+        enemy.isAttacking &&
+        enemy.framesCurrent === 2
+    ) {
+        player.takeHit()
         enemy.isAttacking = false
-        player.health -= 20
         document.querySelector('#playerHealth').style.width = player.health + "%"
     }
+
+    if (enemy.isAttacking && enemy.framesCurrent === 2) {
+        enemy.isAttacking = false
+    }
+
 
     if (enemy.health <= 0 || player.health <= 0) {
         determineWinner({ player, enemy, timerId })
@@ -266,5 +310,5 @@ window.addEventListener("keyup", (event) => {
     }
 })
 
-//50:30; 1:05:55; 2:23:00; 2:48:50;
+//50:30; 1:05:55; 2:23:00; 2:48:50; 3:07:12
 //https://www.youtube.com/watch?v=vyqbNFMDRGQ

@@ -134,7 +134,7 @@ const enemy = new Fighter({
         death: {
             imageSrc: './img/kenji/Death.png',
             framesMax: 7
-          }
+        }
     },
     attackBox: {
         offset: {
@@ -171,6 +171,8 @@ function animate() {
     c.fillRect(0, 0, canvas.width, canvas.height)
     background.update()
     shop.update()
+    c.fillStyle = "rgba(255,255,255, 0.1)"
+    c.fillRect(0, 0, canvas.width, canvas.height)
     player.update()
     enemy.update()
 
@@ -221,7 +223,9 @@ function animate() {
     ) {
         enemy.takeHit()
         player.isAttacking = false
-        document.querySelector('#enemyHealth').style.width = enemy.health + "%"
+        gsap.to('#enemyHealth', {
+            width: enemy.health + "%"
+        })
     }
 
     if (player.isAttacking && player.framesCurrent === 4) {
@@ -239,7 +243,9 @@ function animate() {
     ) {
         player.takeHit()
         enemy.isAttacking = false
-        document.querySelector('#playerHealth').style.width = player.health + "%"
+        gsap.to('#playerHealth', {
+            width: player.health + "%"
+        })
     }
 
     if (enemy.isAttacking && enemy.framesCurrent === 2) {
@@ -255,41 +261,44 @@ function animate() {
 animate()
 
 window.addEventListener("keydown", (event) => {
-    switch (event.key) {
+    if (!player.dead) {
+        switch (event.key) {
 
-        case "d":
-            keys.d.pressed = true
-            player.lastKey = "d"
-            break
-        case "a":
-            keys.a.pressed = true
-            player.lastKey = "a"
-            break
-        case "w":
-            player.velocity.y = -20
-            break
-        case " ":
-            player.attack()
-            break
+            case "d":
+                keys.d.pressed = true
+                player.lastKey = "d"
+                break
+            case "a":
+                keys.a.pressed = true
+                player.lastKey = "a"
+                break
+            case "w":
+                player.velocity.y = -20
+                break
+            case " ":
+                player.attack()
+                break
+        }
     }
 
-    switch (event.key) {
-        case "ArrowRight":
-            keys.ArrowRight.pressed = true
-            enemy.lastKey = "ArrowRight"
-            break
-        case "ArrowLeft":
-            keys.ArrowLeft.pressed = true
-            enemy.lastKey = "ArrowLeft"
-            break
-        case "ArrowUp":
-            enemy.velocity.y = -20
-            break
-        case "ArrowDown":
-            enemy.attack()
-            break
+    if (!enemy.dead) {
+        switch (event.key) {
+            case "ArrowRight":
+                keys.ArrowRight.pressed = true
+                enemy.lastKey = "ArrowRight"
+                break
+            case "ArrowLeft":
+                keys.ArrowLeft.pressed = true
+                enemy.lastKey = "ArrowLeft"
+                break
+            case "ArrowUp":
+                enemy.velocity.y = -20
+                break
+            case "ArrowDown":
+                enemy.attack()
+                break
+        }
     }
-
 })
 
 window.addEventListener("keyup", (event) => {
@@ -310,5 +319,6 @@ window.addEventListener("keyup", (event) => {
     }
 })
 
-//50:30; 1:05:55; 2:23:00; 2:48:50; 3:07:12
+//50:30; 1:05:55; 2:23:00; 2:48:50; 3:07:12; Finished
 //https://www.youtube.com/watch?v=vyqbNFMDRGQ
+//tailwind color palette, google fonts, gsap cdn

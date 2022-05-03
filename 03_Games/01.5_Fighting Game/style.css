@@ -37,6 +37,8 @@ body {
     border-top: 4px solid white;
     border-left: 4px solid white;
     border-bottom: 4px solid white;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
 }
 
 .coverHealth_1 {
@@ -68,6 +70,8 @@ body {
     border-top: 4px solid white;
     border-right: 4px solid white;
     border-bottom: 4px solid white;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
 }
 
 .box1_3 {

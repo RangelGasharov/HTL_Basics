@@ -3,9 +3,39 @@ body{
     padding: 0;
 }
 .output{
+    background: linear-gradient(90deg, rgb(2, 0, 29) 0%, rgb(3, 3, 114) 35%, rgb(5, 8, 196) 100%);
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+#totalWallHits{
+    background-color: blue;
+    animation: mymove 5s infinite;
+    padding: 10px 100px;
+    font-size: larger;
+    text-align: center;
+    color: white;
+}
+
+@keyframes mymove {
+    0% {
+		background: #160352;
+	}
+	25% {
+		background: #250490;
+	}
+	50% {
+		background: #2f08b2;
+	}
+	75% {
+		background: #1d056d;
+	}
+	100% {
+		background: #160352;
+	}
+
+  }

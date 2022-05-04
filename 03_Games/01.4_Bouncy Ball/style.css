@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Press+Start+2P&display=swap');
+
 body{
     margin: 0;
     padding: 0;
 }
 .output{
-    background: linear-gradient(90deg, rgb(2, 0, 29) 0%, rgb(3, 3, 114) 35%, rgb(5, 8, 196) 100%);
+    /*background: linear-gradient(90deg, rgb(2, 0, 29) 0%, rgb(3, 3, 114) 35%, rgb(5, 8, 196) 100%);*/
+    animation: changeColor 20s infinite;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -14,14 +17,18 @@ body{
 
 #totalWallHits{
     background-color: blue;
-    animation: mymove 5s infinite;
+    animation: changeColor_Background 20s infinite;
     padding: 10px 100px;
     font-size: larger;
     text-align: center;
     color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: x-large;
+    font-family: "Poppins";
 }
 
-@keyframes mymove {
+@keyframes changeColor {
     0% {
 		background: #160352;
 	}
@@ -36,6 +43,25 @@ body{
 	}
 	100% {
 		background: #160352;
+	}
+
+  }
+
+  @keyframes changeColor_Background {
+    0% {
+		background: #000000;
+	}
+	25% {
+		background: #1a0560;
+	}
+	50% {
+		background: #2f08b2;
+	}
+	75% {
+		background: #1a0560;
+	}
+	100% {
+		background: #000000;
 	}
 
   }

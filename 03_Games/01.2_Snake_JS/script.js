@@ -15,7 +15,7 @@ const scorepoints = 10;
 let speedsnake = 75;
 
 
-document.getElementById("button1").addEventListener("click", function() {
+document.getElementById("button1").addEventListener("click", function () {
     let speedsnake = document.getElementById("speedsnake").value;
     console.log("Current snakespeed: " + speedsnake);
 });
@@ -33,29 +33,29 @@ function draw() {
     ctx.fillRect(0, 0, canvas.widht, canvas.height)
     ctx.fillStyle = 'rgb(255,0,0)'; //'red'
 
-    if (score >= 30 && score < 60) {
+    if (score >= 3 * scorepoints && score < 6 * scorepoints) {
         ctx.fillStyle = 'rgb(255,42,0)';
-    } else if (score >= 60 && score < 90) {
+    } else if (score >= 6 * scorepoints && score < 9 * scorepoints) {
         ctx.fillStyle = 'rgb(255,85,0)';
-    } else if (score >= 90 && score < 120) {
+    } else if (score >= 9 * scorepoints && score < 12 * scorepoints) {
         ctx.fillStyle = 'rgb(255,85,0)';
-    } else if (score >= 120 && score < 150) {
+    } else if (score >= 12 * scorepoints && score < 15 * scorepoints) {
         ctx.fillStyle = 'rgb(255,128,0)';
-    } else if (score >= 150 && score < 180) {
+    } else if (score >= 15 * scorepoints && score < 18 * scorepoints) {
         ctx.fillStyle = 'rgb(255,170,0)';
-    } else if (score >= 180 && score < 210) {
+    } else if (score >= 18 * scorepoints && score < 21 * scorepoints) {
         ctx.fillStyle = 'rgb(255,213,0)';
-    } else if (score >= 210 && score < 240) {
+    } else if (score >= 21 * scorepoints && score < 24 * scorepoints) {
         ctx.fillStyle = 'rgb(255,255,0)';
-    } else if (score >= 240 && score < 270) {
+    } else if (score >= 24 * scorepoints && score < 27 * scorepoints) {
         ctx.fillStyle = 'rgb(212,255,0)';
-    } else if (score >= 270 && score < 300) {
+    } else if (score >= 27 * scorepoints && score < 30 * scorepoints) {
         ctx.fillStyle = 'rgb(170,255,0)';
-    } else if (score >= 300 && score < 330) {
+    } else if (score >= 30 * scorepoints && score < 33 * scorepoints) {
         ctx.fillStyle = 'rgb(128,255,0)';
-    } else if (score >= 330 && score < 360) {
+    } else if (score >= 33 * scorepoints && score < 36 * scorepoints) {
         ctx.fillStyle = 'rgb(85,255,0)';
-    } else if (score >= 360 && score < 390) {
+    } else if (score >= 36 * scorepoints && score < 39 * scorepoints) {
         ctx.fillStyle = 'rgb(43,255,0)';
     }
 
@@ -86,8 +86,6 @@ function testGameOver() {
         direction = 'LEFT'
     }
 }
-
-
 
 function placeFood() {
     let randomX = Math.floor(Math.random() * cols);
@@ -124,7 +122,7 @@ function gameLoop() {
     shiftSnake();
     if (direction == 'STOP') {
         snake[1].x++
-            snake[1].y++
+        snake[1].y++
     }
     if (direction == 'LEFT') { snake[0].x--; }
     if (direction == 'RIGHT') { snake[0].x++; }

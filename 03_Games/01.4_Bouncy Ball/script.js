@@ -91,8 +91,6 @@ const ball_1 = new Ball({
     ballColor: "green"
 })
 
-ball_1.randomDirection()
-
 const ball_2 = new Ball({
     ballSize: 20,
     ballPosition: {
@@ -105,8 +103,6 @@ const ball_2 = new Ball({
     },
     ballColor: "red"
 })
-
-ball_2.randomDirection()
 
 const ball_3 = new Ball({
     ballSize: 35,
@@ -121,7 +117,6 @@ const ball_3 = new Ball({
     ballColor: "yellow"
 })
 
-ball_3.randomDirection()
 
 console.log(ball_1)
 console.log(ball_2)
@@ -133,7 +128,13 @@ function animate() {
     ball_2.update()
     ball_3.update()
 }
-
 animate()
+
+function executeRandomdirection(){
+    ball_1.randomDirection()
+    ball_2.randomDirection()
+    ball_3.randomDirection()
+}
+executeRandomdirection()
 
 //https://www.youtube.com/watch?v=DeqE2yn3v6Q

@@ -28,7 +28,7 @@ function printvalues(result) {
         for (i = 0; i > result; i--) {
             j += i + "<br>";
             document.getElementById("output").innerHTML = "Negativ" + " " + j;
-            onsole.log(i);
+            console.log(i);
             console.log(result);
         }
     } else {

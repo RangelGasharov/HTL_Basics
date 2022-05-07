@@ -1,99 +1,170 @@
-    .title {
-        margin-top: 50px;
-        margin-bottom: 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: rgb(55, 202, 141);
-    }
-    
-    body {
-        background-color: rgb(85, 85, 192);
-        margin: 0px;
-    }
-    
-    .control {
-        margin: 50px;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .container1 {
-        margin: 5px;
-        display: flex;
-        justify-content: center;
-    }
-    
-    #randomNumber {
-        background-color: white;
-        border: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80px;
-        height: 80px;
-    }
-    
-    #firstword {
-        width: 19%;
-    }
-    
-    #finalword {
-        background-color: white;
-        border: black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .title1 {
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        padding: 10px;
-        border: black;
-    }
-    
-    .title2 {
-        background-color: white;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    #figure1 {
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    #figure2 {
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    #add {
-        background-color: rgb(31, 189, 31);
-    }
-    
-    #unit {
-        width: 11%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    #wordList {
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-top: 50px;
-        margin-left: 500px;
-        margin-right: 500px;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Press+Start+2P&display=swap');
+
+.title {
+    margin-top: 50px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+    color: rgb(36, 53, 128);
+}
+
+body {
+    background-color: rgb(85, 85, 192);
+    margin: 0px;
+}
+
+.control {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#firstword{
+    background-color: rgb(101, 122, 224);
+    color: white;
+}
+
+#firstword::placeholder{
+    color: white;
+    font-family: "Poppins";
+    font-size: x-small;
+}
+
+#unit{
+    background-color: rgb(101, 122, 224);
+    color: white;
+}
+
+#unit::placeholder{
+    color: white;
+    font-family: "Poppins";
+    font-size: x-small;
+}
+
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#figure1{
+    background-color: rgb(101, 122, 224);
+    color: white;
+}
+
+#figure1::placeholder{
+    color: white;
+    font-family: "Poppins";
+    font-size: x-small;
+}
+
+#figure2{
+    background-color: rgb(101, 122, 224);
+    color: white;
+}
+
+#figure2::placeholder{
+    color: white;
+    font-family: "Poppins";
+    font-size: x-small;
+}
+
+.container2 {
+    background-color: rgb(91, 110, 209);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 0 35vw;
+    padding: 10px;
+}
+
+.undertitle_container2 {
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins";
+}
+
+#randomNumber {
+    background-color: rgb(91, 110, 209);
+    border: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    font-family: "Poppins";
+}
+
+#firstword {
+    width: 19%;
+}
+
+#finalword {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(91, 110, 209);
+    border: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+}
+
+.title1 {
+    background-color: rgb(91, 110, 209);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border: black;
+    font-family: "Poppins";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title2 {
+    background-color: rgb(91, 110, 209);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+}
+
+#figure1 {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#figure2 {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#add {
+    background-color: rgb(31, 189, 31);
+    font-family: "Poppins";
+}
+
+#unit {
+    width: 11%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wordList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Poppins";
+}

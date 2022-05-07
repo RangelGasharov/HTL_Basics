@@ -24,7 +24,6 @@ function generate() {
 
     let amountOfRandomNumbers = parseInt(number2) - parseInt(number1) + 1;
     console.log(number1 + ":" + number2);
-    if (amountOfRandomNumbers = "") return
 
     let randomNumber = Math.floor(Math.random() * amountOfRandomNumbers) + parseInt(number1);
     document.getElementById("randomNumber").innerHTML = randomNumber;

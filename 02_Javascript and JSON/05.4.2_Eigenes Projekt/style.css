@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Press+Start+2P&display=swap');
 
+body {
+    background-color: rgb(85, 85, 192);
+    margin: 0px;
+}
+
 .title {
     margin-top: 50px;
     margin-bottom: 0px;
@@ -10,38 +15,55 @@
     color: rgb(36, 53, 128);
 }
 
-body {
-    background-color: rgb(85, 85, 192);
-    margin: 0px;
-}
-
 .control {
     margin: 50px;
     display: flex;
     justify-content: center;
 }
 
-#firstword{
+.title1 {
+    background-color: rgb(91, 110, 209);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border: black;
+    font-family: "Poppins";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#firstword {
     background-color: rgb(101, 122, 224);
     color: white;
 }
 
-#firstword::placeholder{
+#firstword::placeholder {
     color: white;
     font-family: "Poppins";
     font-size: x-small;
 }
 
-#unit{
+#unit {
     background-color: rgb(101, 122, 224);
     color: white;
+    width: 11%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#unit::placeholder{
+#unit::placeholder {
     color: white;
     font-family: "Poppins";
     font-size: x-small;
 }
+
+#add {
+    background-color: rgb(31, 189, 31);
+    font-family: "Poppins";
+}
+
 
 
 .container1 {
@@ -50,27 +72,57 @@ body {
     margin-bottom: 50px;
 }
 
-#figure1{
-    background-color: rgb(101, 122, 224);
-    color: white;
+.title2 {
+    background-color: rgb(91, 110, 209);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
 }
 
-#figure1::placeholder{
+#figure1 {
+    background-color: rgb(101, 122, 224);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#figure1::placeholder {
     color: white;
     font-family: "Poppins";
     font-size: x-small;
 }
 
-#figure2{
+#figure2 {
     background-color: rgb(101, 122, 224);
     color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#figure2::placeholder{
+#figure2::placeholder {
     color: white;
     font-family: "Poppins";
     font-size: x-small;
 }
+
+#randomNumber {
+    background-color: rgb(91, 110, 209);
+    border: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    font-family: "Poppins";
+}
+
+
 
 .container2 {
     background-color: rgb(91, 110, 209);
@@ -88,21 +140,6 @@ body {
     font-family: "Poppins";
 }
 
-#randomNumber {
-    background-color: rgb(91, 110, 209);
-    border: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    font-family: "Poppins";
-}
-
-#firstword {
-    width: 19%;
-}
-
 #finalword {
     width: 100px;
     height: 100px;
@@ -112,53 +149,6 @@ body {
     justify-content: center;
     align-items: center;
     font-family: "Poppins";
-}
-
-.title1 {
-    background-color: rgb(91, 110, 209);
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    border: black;
-    font-family: "Poppins";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.title2 {
-    background-color: rgb(91, 110, 209);
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Poppins";
-}
-
-#figure1 {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#figure2 {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#add {
-    background-color: rgb(31, 189, 31);
-    font-family: "Poppins";
-}
-
-#unit {
-    width: 11%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #wordList {

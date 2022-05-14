@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Press+Start+2P&display=swap');
+
+.nav-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title1 {
+    font-size: 50pt;
+    font-family: "Poppins";
+}
+
+.nav-links {
+    
+    background-color: rgba(0, 0, 0, 0.255);
+    font-size: 20pt;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: white solid 3px;
+    border-radius: 20px;
+    padding-inline-start: 0px;
+}
+
+a.link {
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    text-decoration: none;
+}
+
+a:hover.link {
+    background-color: #00000033;
+    border-radius: 20px;
+}
+
+.container {
+    font-size: 15pt;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.086);
+}
+
+.box1 {
+    font-size: 30pt;
+    font-family: "Poppins";
+    font-weight: bold;
+}
+
+.color {
+    font-size: 30pt;
+}
+
+.btn-hero {
+    background-color: rgba(255, 255, 255, 0.153);
+    border-radius: 10px;
+    font-family: "Poppins";
+    margin-top: 40px;
+    font-size: xx-large;
+}

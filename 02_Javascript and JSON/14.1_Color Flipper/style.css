@@ -30,6 +30,7 @@ a.link {
     text-align: center;
     padding: 30px;
     text-decoration: none;
+    font-family: "Poppins";
 }
 
 a:hover.link {
@@ -39,6 +40,9 @@ a:hover.link {
 
 .container {
     font-size: 15pt;
+    padding: 2%;
+    margin: 0px 22%;
+    border-radius: 40px;
     display: flex;
     justify-content: center;
     flex-direction: column;

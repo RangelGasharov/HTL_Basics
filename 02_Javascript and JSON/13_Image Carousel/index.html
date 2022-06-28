@@ -7,32 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Carousel</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
     <section aria-label="Newest Photos">
 
-        <div class="carousel">
-            <button class="carousel-button prev">&#171;</button>
-            <button class="carousel-button next">&#187;</button>
-            <ul>
+        <div class="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev">&#171;</button>
+            <button class="carousel-button next" data-carousel-button="next">&#187;</button>
+            <ul data-slides>
                 <li class="slide" data-active>
                     <img src="https://source.unsplash.com/78A265wPiO4">
                 </li>
 
                 <li class="slide">
-                    <img src="https://picsum.photos/500?random=2">
+                    <img src="https://source.unsplash.com/random">
                 </li>
 
                 <li class="slide">
-                    <img src="https://picsum.photos/500?random=3">
+                    <img src="https://source.unsplash.com/ndN00KmbJ1c">
                 </li>
 
             </ul>
         </div>
-        
+
     </section>
 
 </body>

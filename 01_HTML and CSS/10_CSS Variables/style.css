@@ -1,0 +1,35 @@
+:root {
+    --div-background-color: red;
+    --text-color: black;
+    --div-padding: 10px;
+    --div-margin: 10px;
+}
+
+body {
+    background-color: var(--background-color, rgb(232, 218, 71));
+}
+
+.child {
+    background-color: var(--div-background-color);
+    color: var(--text-color)
+}
+
+.one {
+    --div-background-color: blue;
+    --text-color: white;
+}
+
+.one-one {
+    margin: var(--div-margin);
+    padding: var(--div-padding);
+}
+
+.one-one {
+    margin: var(--div-margin);
+    padding: var(--div-padding);
+}
+
+.one-two {
+    margin: var(--div-margin);
+    padding: var(--div-padding);
+}

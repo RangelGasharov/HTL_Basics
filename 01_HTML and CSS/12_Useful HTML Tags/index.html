@@ -74,6 +74,36 @@
 
         </fieldset>
     </form>
+
+    <form>
+        <fieldset>
+            <legend>Sub/Sup</legend>
+            <p>H<sub>2</sub>O</p>
+            <p>O<sub>2</sub></p>
+            <p>x<sup>2</sup> * y<sup>4</sup></p>
+        </fieldset>
+    </form>
+
+    <picture>
+        <source srcset="./img/Test-Image-1.png" media="(min-width: 600px">
+
+        <img src="./img/Test-Image-2.png">
+    </picture>
+
+    <form>
+        <template>
+            <h3>This is a template</h3>
+            <small>Test</small>
+        </template>
+    </form>
+
+    <script>
+        const template = document.querySelector('template')
+        const content = template.content.cloneNode(true)
+        content.querySelector('small').innerText = "Text has been changed"
+        document.body.append(content)
+    </script>
+
 </body>
 
 </html>

@@ -1,0 +1,65 @@
+.box {
+    background-color: hsl(200, 70%, 30%);
+    width: 100px;
+    height: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#box1 {
+    transform: rotate(.23turn);
+}
+
+#box2 {
+    transform: scale(1.5, 1.5);
+}
+
+#box3 {
+    transform: translate(-30px, -40px);
+    position: relative;
+}
+
+#box3::after {
+    content: "After";
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#box4 {
+    transform: skew(30deg, -20deg);
+}
+
+#box5 {
+    transform: rotate(30deg) scaleX(.75) translateY(-10px);
+}
+
+#box6 {
+    transform: scale(var(--scale, 1.2)) translateX(var(--translate-x, 50px)) rotate(var(--rotation-z, 30deg));
+}
+
+.big {
+    --scale: 2;
+}
+
+.move {
+    --translate-x: 50px;
+}
+
+.rotate {
+    --rotation-z: 60deg;
+}

@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    counter-reset: heading;
+}
+
+.wrapper {
+    width: 100vw; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+[data-tooltip] {
+    position: relative;
+    font-size: 1.1rem;
+}
+
+[data-tooltip]:hover:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: .25rem;
+    top: -.5rem;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.list1 :is(ul, ol) :is(ul, ol) li {
+    color: green;
+}
+
+.list1 :is(ul, ol) {
+    font-weight: bold;
+}
+
+h2::before {
+    content: "Part " counter(heading, upper-roman) " ";
+    counter-increment: heading;
+}
+
+.list2 ol {
+    counter-reset: outline;
+}
+
+.list2 li {
+    list-style: none;
+}
+
+.list2 li::before {
+    content: counters(outline, ".") ". ";
+    counter-increment: outline;
+}
+
+.flex {
+    width: 100vw;
+    display: flex;
+    gap: 10px;
+}
+
+.item {
+    background-color: red;
+    width: 100%;
+    height: 50px;
+}
+
+.item:nth-child(2n) {
+    background-color: blue;
+}
+
+.circle1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(red, green);
+    margin-bottom: 50px;
+}
+
+.circle2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 50px;
+    background: conic-gradient(
+        hsl(360, 100%, 50%),
+        hsl(315, 100%, 50%),
+        hsl(270, 100%, 50%),
+        hsl(225, 100%, 50%),
+        hsl(180, 100%, 50%),
+        hsl(135, 100%, 50%),
+        hsl(90, 100%, 50%),
+        hsl(45, 100%, 50%),
+        hsl(360, 100%, 50%)
+        );  
+}
+
+.circle3 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        red .25turn,
+        blue .25turn .65turn,
+        green .5turn
+    );
+    margin-bottom: 50px;
+}

@@ -1,21 +1,21 @@
 body {
     margin: 0;
     padding: 0;
-    counter-reset: heading;
 }
 
 .wrapper {
-    width: 100vw; 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 40px;
+    counter-reset: heading;
 }
 
 [data-tooltip] {
     position: relative;
     font-size: 1.1rem;
+    margin-top: 50px;
 }
 
 [data-tooltip]:hover:before {
@@ -57,7 +57,7 @@ h2::before {
 }
 
 .flex {
-    width: 100vw;
+    width: 100%;
     display: flex;
     gap: 10px;
 }
@@ -72,40 +72,84 @@ h2::before {
     background-color: blue;
 }
 
+.circles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 1rem;
+}
+
 .circle1 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background: conic-gradient(red, green);
-    margin-bottom: 50px;
 }
 
 .circle2 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin-bottom: 50px;
-    background: conic-gradient(
-        hsl(360, 100%, 50%),
-        hsl(315, 100%, 50%),
-        hsl(270, 100%, 50%),
-        hsl(225, 100%, 50%),
-        hsl(180, 100%, 50%),
-        hsl(135, 100%, 50%),
-        hsl(90, 100%, 50%),
-        hsl(45, 100%, 50%),
-        hsl(360, 100%, 50%)
-        );  
+    background: conic-gradient(hsl(360, 100%, 50%),
+            hsl(315, 100%, 50%),
+            hsl(270, 100%, 50%),
+            hsl(225, 100%, 50%),
+            hsl(180, 100%, 50%),
+            hsl(135, 100%, 50%),
+            hsl(90, 100%, 50%),
+            hsl(45, 100%, 50%),
+            hsl(360, 100%, 50%));
 }
 
 .circle3 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: conic-gradient(
-        red .25turn,
-        blue .25turn .65turn,
-        green .5turn
-    );
-    margin-bottom: 50px;
+    background: conic-gradient(red .25turn,
+            blue .25turn .65turn,
+            green .5turn);
+}
+
+.circle4 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(hsl(0, 100%, 50%),
+            hsl(90, 100%, 50%),
+            hsl(180, 100%, 50%),
+            hsl(270, 100%, 50%),
+            hsl(360, 100%, 50%),
+            hsl(270, 100%, 50%),
+            hsl(180, 100%, 50%),
+            hsl(90, 100%, 50%),
+            hsl(0, 100%, 50%));
+}
+
+.circle5 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(red, green);
+}
+
+.circle6 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: repeating-conic-gradient(red 0deg 10deg, orange 10deg 20deg, yellow 20deg 30deg, green 30deg 40deg, blue 40deg 50deg, purple 50deg 60deg);
+}
+
+
+.circle7 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: repeating-radial-gradient(red 0%, green 10%);
+}
+
+.circle8 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: repeating-radial-gradient(red 0%, orange 3.33%, yellow 6.66%, green 10%, blue 13.33%, purple 16.66%, brown 20%);
 }

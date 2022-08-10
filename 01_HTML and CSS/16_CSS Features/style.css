@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: .5rem;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card {
+    width: 400px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.cardheader {
+    font-size: 2rem;
+    padding: .5rem;
+    background-color: blue;
+    color: white;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.textwithshadow {
+    font-size: 5rem;
+    text-shadow: 3px 3px 0px red;
+}
+
+.textinforeground {
+    font-size: 5rem;
+    background-image: url("./img/Water.jpg");
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.normaltext {
+    all: initial;
+    /* sets to "deafult" design */
+    font-size: 2rem;
+    padding: .5rem;
+}
+
+.btn {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: .25rem .5rem;
+    font-size: 3rem;
+}
+
+.ellipse {
+    border-radius: 50%;
+}
+
+.pill {
+    border-radius: 9999px;
+    /* high value that is bigger than the height */
+}

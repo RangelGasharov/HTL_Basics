@@ -113,3 +113,62 @@ body {
     border: none;
     background-color: hsl(115, 29%, 43%);
 }
+
+.tile.shake {
+    animation: shake 250ms ease-in-out,
+}
+
+@keyframes shake {
+    10% {
+        transform: translateX(-5%);
+    }
+
+    30% {
+        transform: translateX(5%);
+    }
+
+    50% {
+        transform: translateX(-7.5%);
+    }
+
+    70% {
+        transform: translateX(-7.5%);
+    }
+
+    90% {
+        transform: translateX(-5%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.alert-container {
+    position: fixed;
+    top: 10vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.alert {
+    pointer-events: none;
+    background-color: hsl(204, 7%, 85%);
+    padding: .75em;
+    border-radius: .25em;
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+    margin-bottom: .5em;
+}
+
+.alert:last-child {
+    margin-bottom: 0;
+}
+
+.alert.hide {
+    opacity: 0;
+}

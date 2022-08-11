@@ -1,9 +1,12 @@
 let dictionary = [
-    "above", "abuse", "actor", "apple", "basis", "beach", "below", "bread", "brown", "chair", "class", "cover", "cycle", "dance", "doubt", "dream", "drink",
-    "earth", "enemy", "error", "event", "fault", "field", "floor", "focus", "glass", "group", "guide", "heart", "horse", "house", "image", "input", "issue",
+    "about", "above", "abuse", "actor", "acnes", "adays", "adios", "admit", "agree", "ahead", "album", "alien", "alike", "allow", "alpha", "angry", "ancle", "anime", "antic", "apple", "argue", "asset", "atoms", "awake", "awful",
+    "basic", "badly", "baths", "beach", "bears", "beige", "below", "biome", "black", "blank", "blast", "blush", "bombs", "boost", "bread", "break", "bring", "brown", "candy", "cards", "cargo", "carry", "catch", "chair", "chaos",
+    "chase", "cheat", "chest", "chief", "chill", "china", "claim", "class", "clean", "click", "clock", "clone", "coach", "codes", "cover", "crane", "crash", "crazy", "crime", "crowd", "curse", "cycle", "daily", "dance", "death",
+    "debut", "delay", "delta", "depot", "depth", "diary", "digit", "disco", "dodge", "doing", "donut", "doubt", "dozen", "dream", "dress", "drill", "drink",
+    "eagle", "earth", "elder", "elite",  "elope", "enemy", "enjoy", "equal", "error", "event", "exist", "fault", "field", "floor", "focus", "glass", "grade", "group", "guide", "heart", "horse", "house", "image", "input", "issue",
     "japan", "judge", "kitty", "kills", "knife", "layer", "level", "light", "limit", "lunch", "major", "march", "match", "metal", "money", "month", "motor",
     "music", "night", "noise", "north", "novel", "nurse", "offer", "order", "other", "owner", "panel", "paper", "party", "peace", "phase", "phone", "piece",
-    "pilot", "place", "pound", "power", "price", "queen", "radio", "range", "reply", "river", "round", "route", "rugby", "scale", "score", "sheep", "shirt",
+    "pilot", "place", "pound", "power", "price", "quiet", "queen", "radio", "range", "reply", "river", "round", "route", "rugby", "scale", "score", "sheep", "shirt",
     "skill", "sound", "space", "speed", "sport", "style", "sugar", "theme", "total", "touch", "tower", "trend", "truth", "uncle", "union", "value", "video",
     "visit", "voice", "waste", "watch", "water", "while", "whole", "woman", "world", "youth"
 ];

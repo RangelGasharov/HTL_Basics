@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.parent {
+    display: flex;
+    justify-content: space-around;
+    background-color: lightskyblue;
+    padding: 1em;
+    margin: 1em;
+    border: 1px black dashed;
+}
+
+.child {
+    width: 100px;
+    height: 100px;
+    background-color: lightpink;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}

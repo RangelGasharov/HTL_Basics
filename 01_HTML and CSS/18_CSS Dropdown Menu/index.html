@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Dropdown Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Information</button>
+            <div class="dropdown-menu information-grid">
+                <div>
+                    <div class="dropdown-heading">Topic 1</div>
+                    <div class="dropdown-links">
+                        <a href="#" class="link">sub-point 1</a>
+                        <a href="#" class="link">sub-point 2</a>
+                        <a href="#" class="link">sub-point 3</a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="dropdown-heading">Topic 2</div>
+                    <div class="dropdown-links">
+                        <a href="#" class="link">sub-point 1</a>
+                        <a href="#" class="link">sub-point 2</a>
+                        <a href="#" class="link">sub-point 3</a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="dropdown-heading">Topic 3</div>
+                    <div class="dropdown-links">
+                        <a href="#" class="link">sub-point 1</a>
+                        <a href="#" class="link">sub-point 2</a>
+                        <a href="#" class="link">sub-point 3</a>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="dropdown-heading">Topic 4</div>
+                    <div class="dropdown-links">
+                        <a href="#" class="link">sub-point 1</a>
+                        <a href="#" class="link">sub-point 2</a>
+                        <a href="#" class="link">sub-point 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="link">Pricing</a>
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Login</button>
+            <div class="dropdown-menu">
+                <form class="login-form">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

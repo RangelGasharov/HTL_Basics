@@ -1,0 +1,29 @@
+.div-initial {
+    display: initial;
+    background-color: green;
+}
+
+.custom-button {
+    font-family: inherit;
+}
+
+.custom-div {
+    font-size: 2rem;
+    border: 1px solid black;
+    background-color: rgb(206, 85, 85);
+}
+
+.custom-p {
+    border: inherit;
+}
+
+.button-unset {
+    all: unset;
+    background-color: red;
+}
+
+.button-revert {
+    all: unset;
+    background-color: revert;
+    padding: revert;
+}

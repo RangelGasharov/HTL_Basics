@@ -82,6 +82,73 @@
             </tbody>
         </table>
     </div>
+    <br>
+    <div class="container">
+        <form>
+            <div class="form-check form-switch form-check-inline">
+                <input type="checkbox" id="email" class="form-check-input">
+                <label for="email" class="form-label">Email</label>
+            </div>
+            <div class="form-check form-switch form-check-inline">
+                <input type="checkbox" id="email" class="form-check-input">
+                <label for="email" class="form-label">Email</label>
+            </div>
+            <input type="email" id="email" class="form-control">
+            <input type="color" class="form-control form-control-color">
+            <input type="range" class="form-range">
+            <select class="form-select">
+                <option>One</option>
+                <option>Two</option>
+            </select>
+            <button>Submit</button>
+        </form>
+    </div>
+    <br>
+    <div class="container">
+        <form action>
+            <label for="text" class="form-label">Amount</label>
+            <div class="input-group">
+                <div class="input-group-text">$</div>
+                <input type="number" id="text" class="form-control">
+                <div class="input-group-text">.00</div>
+                <button class="btn btn-primary">+</button>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+    <br>
+    <div class="container">
+        <form id="form1" novalidate>
+            <div class="form-floating">
+                <input type="email" id="email" class="form-control" placeholder="Place email here" required>
+                <label for="email">Email</label>
+                <div class="invalid-feedback">Invalid email</div>
+                <div class="valid-feedback">Correct email</div>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <script>
+        const form1 = document.querySelector("#form1")
+        form1.addEventListener("submit", e => {
+            if (!form1.checkValidity()) {
+                e.preventDefault()
+            }
+
+            form1.classList.add("was-validated")
+        })
+    </script>
+    <br>
+    <div class="container">
+        <button class="btn btn-primary">Test</button>
+        <button class="btn btn-primary" disabled>Test</button>
+        <button class="btn btn-link">Test</button>
+        <button class="btn btn-outline-secondary">Test</button>
+        <button class="btn btn-outline-primary" data-bs-toggle="button">Test</button>
+        <a class="btn btn-primary" href="#">Test</a>
+    </div>
+    <br>
 </body>
 
 </html>

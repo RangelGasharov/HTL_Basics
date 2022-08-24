@@ -1,0 +1,28 @@
+.container {
+    font-size: 4em;
+}
+
+body {
+    background-color: #333;
+    color: #CCC;
+}
+
+html::-webkit-scrollbar {
+    width: 3vw;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #7775;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background-color: #777;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #5555;
+}
+
+html::-webkit-scrollbar-track:hover {
+    background-color: #555;
+}

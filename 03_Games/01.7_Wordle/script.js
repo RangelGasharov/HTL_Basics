@@ -6,7 +6,7 @@ let dictionary = [
     "eagle", "earth", "ebook", "eight", "elder", "elite", "elope", "enemy", "enjoy", "equal", "equip", "error", "essay", "event", "exams", "exist",
     "faced", "fakes", "fault", "field", "fixes", "floor", "focus", "fresh", "fusel",
     "gamma", "ghost", "glare", "glass", "grass", "goals", "golem", "grade", "greek", "group", "guide",
-    "hands", "happy", "heart", "heath", "hokey", "hoper", "hooty", "horse", "hours", "house",
+    "hacks", "hands", "happy", "heart", "heath", "hokey", "hoper", "hooty", "horse", "hours", "house",
     "iches", "ideas", "image", "input", "issue",
     "japan", "jeans", "jelly", "jimmy", "jokes", "judge",
     "karma", "kelly", "kitty", "kills", "knife", "koala", "korea",
@@ -17,13 +17,13 @@ let dictionary = [
     "panda", "panel", "paper", "party", "pause", "peace", "peaks", "peans", "pearl", "penny", "phase", "phone", "piece", "pilot", "place", "plant", "pluto", "pound", "power", "price", "puppy",
     "quick", "quiet", "queen", "query", "quest", "quote",
     "races", "radio", "rails", "rains", "range", "ready", "reply", "rings", "river", "roads", "round", "route", "rugby", "ruins", "rumor",
-    "scale", "score", "shake", "sheep", "shirt", "silly", "skill", "smoke", "songs", "solve", "squad", "sound", "space", "speed", "spike", "sport", "stars", "style", "sugar",
+    "scale", "score", "shake", "sheep", "shirt", "silly", "skill", "sleep", "smoke", "songs", "solve", "squad", "sound", "space", "speed", "spike", "sport", "stars", "style", "sugar",
     "taiga", "taxes", "teams", "tease", "theme", "thumb", "tires", "total", "tools", "touch", "tower", "trend", "truck", "truth",
     "ultra", "unbox", "uncle", "union", "unite", "unset", "usage", "using", "usual",
     "value", "venus", "video", "visit", "viral", "vital", "vlogs", "vodka", "voice",
-    "waste", "watch", "water", "wheal", "while", "whole", "woman", "world", "wrote",
+    "waste", "watch", "water", "wheal", "wheat", "whale", "while", "white", "whole", "woman", "world", "wrote",
     "yacht", "young", "youth",
-    "zebra"
+    "zebra", "zones"
 ];
 let targetWords = [
     "above", "abuse", "actor", "apple", "basis", "beach", "below", "bread", "brown", "chair", "class", "cover", "cycle", "dance", "doubt", "dream", "drink",

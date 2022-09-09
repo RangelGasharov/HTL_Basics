@@ -7,14 +7,11 @@
 
 body {
     margin: 0;
-    padding: 0;
 }
 
 .wrapper {
-    min-width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    max-width: 100vw;
+    height: 100%;
     background: linear-gradient(135deg, black, #020844);
 }
 
@@ -76,7 +73,6 @@ body {
 }
 
 #forest {
-    width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: 3;
@@ -89,17 +85,21 @@ body {
     color: white;
 }
 
+.wrapper2 {
+    width: 100%;
+    background: linear-gradient(black, rgb(13, 4, 91));
+    position: relative;
+    z-index: 4;
+    padding: 0 2em;
+}
+
 .title2 {
     font-size: 3em;
     text-shadow: 0 0 10px #fff, 0 0 20px #1045b5, 0 10px 30px #1045b5;
-    z-index: 1;
     color: white;
-}
-
-.wrapper2 {
-    background: linear-gradient(black, rgb(7, 2, 51));
 }
 
 .text {
     color: white;
+    font-size: 2em;
 }

@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: hsla(var(--main-background-color), 1);
+}
+
+:root {
+    --main-background-color: 209, 100%, 78%;
+    --opacity-calendar-fields: 0.7;
+    --number-of-columns: 8;
+    --z-index-popup: 10;
+}
+
+.wrapper {
+    min-height: 100vh;
+    height: 100%;
+    padding-bottom: 2em;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendartitle {
+    font-weight: bolder;
+    font-size: 3em;
+    padding: 1.5em 0;
+}
+
+.calendarfields {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(var(--number-of-columns), 1fr);
+    gap: 2em 1em;
+}
+
+.calendarfield {
+    aspect-ratio: 1/1;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2em;
+    background-color: white;
+    text-shadow: .5px .5px .5px black;
+    opacity: var(--opacity-calendar-fields);
+    border-radius: 1rem;
+    border: none;
+    color: black;
+}
+
+.calendarfield:hover,
+.calendarfield:focus {
+    --opacity-calendar-fields: 1;
+    transition: ease-in-out 250ms;
+    transform: scale(1.1);
+}
+
+.calendarfield:nth-child(even) {
+    background-color: red;
+}
+
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: 200ms ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 1em;
+    z-index: var(--z-index-popup);
+    background-color: white;
+    width: 80vw;
+    /*background-position: center;
+    background-repeat: no-repeat;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#popup.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#overlay {
+    position: fixed;
+    min-height: 100vh;
+    height: 100%;
+    z-index: var(--z-index-popup);
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .8);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+    touch-action: none;
+    scroll-behavior: smooth;
+}
+
+#gif {
+    width: 100%;
+}

@@ -1,0 +1,49 @@
+@media screen and (max-width: 1080px) {
+    .calendarfields {
+        width: 90vw;
+        display: grid;
+        gap: 1em 1em;
+    }
+}
+
+@media screen and (max-width: 1080px) and (orientation: portrait) {
+    .calendarfields {
+        --number-of-columns: 6;
+    }
+}
+
+@media screen and (max-width: 720px) and (orientation: portrait) {
+    .calendarfields {
+        --number-of-columns: 4;
+    }
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+    .calendarfields {
+        --number-of-columns: 3;
+    }
+}
+
+@media screen and (max-width: 1080px) and (orientation: landscape) {
+    .calendarfields {
+        --number-of-columns: 6;
+    }
+}
+
+@media screen and (max-width: 720px) and (orientation: landscape) {
+    .calendarfields {
+        --number-of-columns: 6;
+    }
+}
+
+@media screen and (max-width: 480px) and (orientation: landscape) {
+    .calendarfields {
+        --number-of-columns: 3;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    #popup {
+        max-width: 40%;
+    }
+}

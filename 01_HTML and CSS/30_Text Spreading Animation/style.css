@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    color: white;
+    font-size: 6vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+}
+
+#text {
+    width: 80vw;
+    height: auto;
+}
+
+#text:has(.fancy:hover) .word:not(.fancy:hover) {
+    opacity: 0.2;
+}
+
+.fancy>.letter {
+    display: inline-block;
+    transition: transform 350ms ease;
+}
+
+.fancy:hover>.letter {
+    transition-duration: 800ms;
+}

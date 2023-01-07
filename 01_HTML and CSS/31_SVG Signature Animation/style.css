@@ -1,0 +1,19 @@
+#signature {
+    fill-opacity: 0;
+    stroke: black;
+    stroke-width: .3em;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 20000;
+    animation: sign 8s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sign {
+    0% {
+        stroke-dashoffset: 20000; 
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill-opacity: 1;
+    }
+}

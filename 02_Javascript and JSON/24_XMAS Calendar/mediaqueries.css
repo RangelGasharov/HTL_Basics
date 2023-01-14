@@ -43,7 +43,15 @@
 }
 
 @media screen and (orientation: landscape) {
-    #popup {
-        max-width: 40%;
+    #gif {
+        height: 80vh;
+        max-height: 80vh;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    #gif {
+        width: 80vw;
+        max-width: 80vw;
     }
 }

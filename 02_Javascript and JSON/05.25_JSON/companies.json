@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Small Bakery",
+        "numberOfEmployees": 3,
+        "ceo": null,
+        "rating": 4.4
+    },
+    {
+        "name": "City Library",
+        "numberOfEmployees": 10,
+        "ceo": null,
+        "rating": 4.6
+    },
+    {
+        "name": "Big Corporation",
+        "numberOfEmployees": 5500,
+        "ceo": "Nicole",
+        "rating": 3.9
+    }
+]

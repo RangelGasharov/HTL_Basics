@@ -66,6 +66,6 @@ body {
     background-color: var(--color-btn-background);
     border-radius: .3em;
     border: var(--color-btn-border) .1em solid;
-    font-size: 1.5em;
+    font-size: 1.2em;
     cursor: pointer;
 }

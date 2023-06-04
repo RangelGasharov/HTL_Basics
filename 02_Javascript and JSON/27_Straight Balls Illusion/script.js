@@ -2,9 +2,10 @@ const canvas = document.getElementById("canvas")
 const context = canvas.getContext("2d")
 let circles = []
 let bigRadius = 0.8 * canvas.width / 2;
-let amountOfCircles = 20;
+let amountOfCircles = 16;
 let centerX = canvas.width / 2;
 let centerY = canvas.height / 2;
+const startTime = Date.now()
 
 class Circle {
     constructor(radius, color) {
@@ -14,19 +15,8 @@ class Circle {
         this.radius = radius
         this.color = color
         this.travelingAngle
-        this.displacementX
-        this.displacementY
-        this.isGoingForward
         this.timeShift
         this.isVisible
-        this.isMoving = false;
-        this.progress
-    }
-
-    moveAfterDelay() {
-        setTimeout(() => {
-            this.isMoving = true;
-        }, this.timeShift);
     }
 
     draw() {
@@ -36,27 +26,21 @@ class Circle {
             context.fillStyle = this.color;
             context.fill();
             context.closePath();
+
+            context.strokeStyle = "white";
+            context.lineWidth = 2
+            context.moveTo(bigRadius * (Math.cos(0)) * Math.cos(this.travelingAngle) + centerX, bigRadius * (Math.cos(0)) * Math.sin(this.travelingAngle) + centerY);
+            context.lineTo(bigRadius * (-Math.cos(0)) * Math.cos(this.travelingAngle) + centerX, bigRadius * (-Math.cos(0)) * Math.sin(this.travelingAngle) + centerY);
+            context.stroke();
         }
     }
 
     update() {
-        if (this.isMoving) {
-            this.progress = (Math.sqrt((this.x - canvas.width / 2) ** 2 + (this.y - canvas.height / 2) ** 2)) / (2 * bigRadius)
-            let speed = 2 * Math.abs(Math.sin(0.5 * Math.PI * this.progress))
-
-            if (Math.sqrt((this.x - canvas.width / 2) ** 2 + (this.y - canvas.height / 2) ** 2) > bigRadius) {
-                this.isGoingForward = !this.isGoingForward;
-            }
-
-            if (this.isGoingForward) {
-                this.x -= Math.cos(this.travelingAngle) * speed
-                this.y -= Math.sin(this.travelingAngle) * speed
-            } else {
-                this.x += Math.cos(this.travelingAngle) * speed
-                this.y += Math.sin(this.travelingAngle) * speed
-            }
-            console.log(circles[0].progress)
-        }
+        let currentTime = Date.now()
+        let time = (currentTime - startTime) / 1000
+        let angleVelocity = 1
+        this.x = bigRadius * (- Math.cos(angleVelocity * time + this.timeShift)) * Math.cos(this.travelingAngle) + centerX
+        this.y = bigRadius * (- Math.cos(angleVelocity * time + this.timeShift)) * Math.sin(this.travelingAngle) + centerY
         this.draw()
     }
 }
@@ -76,15 +60,13 @@ function createButtons() {
 function createCircles() {
     for (i = 1; i <= amountOfCircles; i++) {
         let circleRadius = 20;
-        currentCircle = new Circle(circleRadius, "rgb(255, 150, 20)");
+        currentCircle = new Circle(circleRadius, `rgb(${i * 40 + 100}, ${i * 20}, ${i * 10})`);
         currentCircle.id = i;
-        currentCircle.timeShift = i * 1200;
+        currentCircle.timeShift = i * Math.PI / amountOfCircles;
         currentCircle.isVisible = true;
-        currentCircle.travelingAngle = 2 * Math.PI / amountOfCircles * (i - 1);
-        currentCircle.displacementX = Math.cos(currentCircle.travelingAngle) * bigRadius;
-        currentCircle.displacementY = Math.sin(currentCircle.travelingAngle) * bigRadius;
-        currentCircle.x = centerX + currentCircle.displacementX;
-        currentCircle.y = centerY + currentCircle.displacementY;
+        currentCircle.travelingAngle = Math.PI / amountOfCircles * (i - 1);
+        currentCircle.x = centerX;
+        currentCircle.y = centerY;
         currentCircle.draw();
         circles.push(currentCircle)
     }
@@ -95,7 +77,6 @@ function animate() {
     window.requestAnimationFrame(animate)
     circles.forEach(circle => {
         circle.update()
-        circle.moveAfterDelay()
     });
 }
 
@@ -121,3 +102,4 @@ buttonsOfCircles.forEach(button => {
 /* 02.06.2023, 21:20 - 22:40 */
 /* 03.06.2023, 12:20 - 13:30 */
 /* 03.06.2023, 14:10 - 15:00 */
+/* 04.06.2023, 20:00 - 21:20 */

@@ -27,11 +27,14 @@ class Circle {
             context.fill();
             context.closePath();
 
+            context.globalCompositeOperation = 'destination-over';
+            context.beginPath();
             context.strokeStyle = "white";
             context.lineWidth = 2
             context.moveTo(bigRadius * (Math.cos(0)) * Math.cos(this.travelingAngle) + centerX, bigRadius * (Math.cos(0)) * Math.sin(this.travelingAngle) + centerY);
-            context.lineTo(bigRadius * (-Math.cos(0)) * Math.cos(this.travelingAngle) + centerX, bigRadius * (-Math.cos(0)) * Math.sin(this.travelingAngle) + centerY);
+            context.lineTo(bigRadius * (Math.cos(0 + Math.PI)) * Math.cos(this.travelingAngle) + centerX, bigRadius * (-Math.cos(0)) * Math.sin(this.travelingAngle) + centerY);
             context.stroke();
+            context.globalCompositeOperation = 'source-over';
         }
     }
 
@@ -60,7 +63,7 @@ function createButtons() {
 function createCircles() {
     for (i = 1; i <= amountOfCircles; i++) {
         let circleRadius = 20;
-        currentCircle = new Circle(circleRadius, `rgb(${i * 40 + 100}, ${i * 20}, ${i * 10})`);
+        currentCircle = new Circle(circleRadius, `rgb(${i / amountOfCircles * 200 + 100}, ${i / amountOfCircles * 50}, ${i / amountOfCircles * 10})`);
         currentCircle.id = i;
         currentCircle.timeShift = i * Math.PI / amountOfCircles;
         currentCircle.isVisible = true;
@@ -93,13 +96,17 @@ const buttonsOfCircles = document.querySelectorAll(".btn-balls-toggle")
 buttonsOfCircles.forEach(button => {
     button.addEventListener("click", () => {
         let buttonValue = button.value
+        button.classList.toggle('clicked');
         toggleCircle(buttonValue)
     })
 })
 
-/* 20.05.2023, 16:00 - 18:15 */
-/* 20.05.2023, 19:00 - 19:15 */
-/* 02.06.2023, 21:20 - 22:40 */
-/* 03.06.2023, 12:20 - 13:30 */
-/* 03.06.2023, 14:10 - 15:00 */
-/* 04.06.2023, 20:00 - 21:20 */
+/* 
+ 20.05.2023, 16:00 - 18:15 --> 2.25 h
+ 20.05.2023, 19:00 - 19:15 --> 0.25 h
+ 02.06.2023, 21:20 - 22:40 --> 1.33 h
+ 03.06.2023, 12:20 - 13:30 --> 1.16 h
+ 03.06.2023, 14:10 - 15:00 --> 0.83 h
+ 04.06.2023, 20:00 - 21:20 --> 1.33 h
+ Total: 7.15 h
+*/

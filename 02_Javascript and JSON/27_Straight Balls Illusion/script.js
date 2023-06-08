@@ -2,7 +2,7 @@ const canvas = document.getElementById("canvas")
 const context = canvas.getContext("2d")
 let circles = []
 let bigRadius = 0.8 * canvas.width / 2;
-let amountOfCircles = 16;
+let amountOfCircles = 32;
 let centerX = canvas.width / 2;
 let centerY = canvas.height / 2;
 const startTime = Date.now()
@@ -21,16 +21,17 @@ class Circle {
 
     draw() {
         if (this.isVisible) {
+            context.strokeStyle = "white";
+            context.lineWidth = 2
             context.beginPath();
             context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
             context.fillStyle = this.color;
             context.fill();
             context.closePath();
+            context.stroke();
 
             context.globalCompositeOperation = 'destination-over';
             context.beginPath();
-            context.strokeStyle = "white";
-            context.lineWidth = 2
             context.moveTo(bigRadius * (Math.cos(0)) * Math.cos(this.travelingAngle) + centerX, bigRadius * (Math.cos(0)) * Math.sin(this.travelingAngle) + centerY);
             context.lineTo(bigRadius * (Math.cos(0 + Math.PI)) * Math.cos(this.travelingAngle) + centerX, bigRadius * (-Math.cos(0)) * Math.sin(this.travelingAngle) + centerY);
             context.stroke();

@@ -8,7 +8,7 @@ input.addEventListener("keyup", calculateResult);
 input.addEventListener("change", calculateResult);
 inputUnit.addEventListener("change", calculateResult);
 output.addEventListener("change", calculateInput);
-outputUnit.addEventListener("change", calculateInput);
+outputUnit.addEventListener("change", calculateResult);
 
 
 const unitsInMeters = {
@@ -18,7 +18,11 @@ const unitsInMeters = {
     "centimeter": 10 ** -2,
     "decimeter": 10 ** -1,
     "meter": 1,
-    "kilometer": 10 ** 3
+    "kilometer": 10 ** 3,
+    "inch": 0.0254,
+    "foot": 0.3048,
+    "yard": 0.9144,
+    "mile": 1610
 }
 
 function getConstant(unitString) {

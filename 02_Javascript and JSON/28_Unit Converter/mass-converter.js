@@ -11,18 +11,18 @@ output.addEventListener("change", calculateInput);
 outputUnit.addEventListener("change", calculateResult);
 
 
-const unitsInMeters = {
-    "nanometer": 10 ** -9,
-    "micrometer": 10 ** -6,
-    "milimeter": 10 ** -3,
-    "centimeter": 10 ** -2,
-    "decimeter": 10 ** -1,
-    "meter": 1,
-    "kilometer": 10 ** 3,
-    "inch": 0.0254,
-    "foot": 0.3048,
-    "yard": 0.9144,
-    "mile": 1_610
+const unitsInGrams = {
+    "nanogram": 10 ** -9,
+    "microgram": 10 ** -6,
+    "miligram": 10 ** -3,
+    "gram": 1,
+    "kilogram": 10 ** 3,
+    "ton": 10 ** 6,
+    "ounce": 28.3495,
+    "pound": 453.592,
+    "stone": 6350.29,
+    "short ton": 907_185,
+    "long ton": 1_016_000
 }
 
 function getConstant(unitString) {

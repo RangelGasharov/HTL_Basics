@@ -10,22 +10,21 @@ inputUnit.addEventListener("change", calculateResult);
 output.addEventListener("change", calculateInput);
 outputUnit.addEventListener("change", calculateResult);
 
-const unitsInGrams = {
-    "nanogram": 10 ** -9,
-    "microgram": 10 ** -6,
-    "miligram": 10 ** -3,
-    "gram": 1,
-    "kilogram": 10 ** 3,
-    "ton": 10 ** 6,
-    "ounce": 28.3495,
-    "pound": 453.592,
-    "stone": 6350.29,
-    "short ton": 907_185,
-    "long ton": 1_016_000
+const unitsInSeconds = {
+    "nanoseconds": 10 ** -9,
+    "microseconds": 10 ** -6,
+    "miliseconds": 10 ** -3,
+    "seconds": 1,
+    "minute": 60,
+    "hour": 3_600,
+    "day": 86_400,
+    "year": 31_536_000,
+    "decade": 315_360_000,
+    "century": 3_153_600_000
 }
 
 function getConstant(unitString) {
-    let constant = unitsInGrams[unitString] ?? "Not found"
+    let constant = unitsInSeconds[unitString] ?? "Not found"
     return constant;
 }
 

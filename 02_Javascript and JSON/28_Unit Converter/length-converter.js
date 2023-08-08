@@ -10,7 +10,6 @@ inputUnit.addEventListener("change", calculateResult);
 output.addEventListener("change", calculateInput);
 outputUnit.addEventListener("change", calculateResult);
 
-
 const unitsInMeters = {
     "nanometer": 10 ** -9,
     "micrometer": 10 ** -6,
@@ -26,7 +25,7 @@ const unitsInMeters = {
 }
 
 function getConstant(unitString) {
-    let constant = unitsInGrams[unitString] ?? "Not found"
+    let constant = unitsInMeters[unitString] ?? "Not found"
     return constant;
 }
 

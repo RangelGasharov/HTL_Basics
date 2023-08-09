@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=REM:wght@500&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'REM';
+}
+
+body {
+    margin: 0;
+    background-color: rgb(200, 100, 100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3em;
+    padding: 3em 3em;
+    background: rgb(175, 75, 75);
+}
+
+h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.reset-btn {
+    padding: 1em 2em;
+    border: none;
+    color: rgb(150, 50, 50);
+    background: #fff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.reset:focus {
+    color: #fff;
+    background: rgb(150, 50, 50);
+}
+
+.game {
+    width: 520px;
+    height: 520px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    perspective: 30vw;
+}
+
+.item {
+    position: relative;
+    width: 2.5em;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background: #fff;
+    transform: rotateY(180deg);
+    transition: 250ms;
+}
+
+.item:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(200, 100, 100);
+    transition: 250ms;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.item.boxOpen {
+    transform: rotateY(0deg);
+}
+
+.boxOpen:after,
+.boxMatch::after {
+    transform: rotateY(180deg);
+}

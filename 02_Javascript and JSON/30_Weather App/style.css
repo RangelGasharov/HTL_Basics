@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=REM:wght@500&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgb(255, 145, 100), rgb(48, 62, 143));
+    color: white;
+}
+
+.location,
+.temperature {
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.degree-section {
+    display: flex;
+    align-items: center;
+}
+
+.degree-section span {
+    margin: .2em;
+    font-size: 2em;
+}
+
+.degree-section h2 {
+    font-size: 2.5em;
+}

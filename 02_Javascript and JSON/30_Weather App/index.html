@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js" defer></script>
 </head>
 
 <body>
@@ -22,13 +22,15 @@
                 </svg>
             </button>
         </div>
-        <div class="weather">
-            <h2 class="city">Weather in ...</h2>
-            <div class="temp">30°C</div>
-            <img src="" alt="" class="icon">
-            <div class="description">Sunny</div>
-            <div class="humidity">Humidity: 40%</div>
-            <div class="wind">Wind speed: 5 km/h</div>
+        <div class="weather loading">
+            <h2 class="city"></h2>
+            <div class="temp"></div>
+            <div class="flex">
+                <img src="https://openweathermap.org/img/wn/03n@2x.png" alt="" class="icon">
+                <div class="description"></div>
+            </div>
+            <div class="humidity"></div>
+            <div class="wind"></div>
         </div>
     </div>
 </body>

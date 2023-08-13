@@ -38,6 +38,22 @@ body {
     font-size: 1.5em;
 }
 
+.temp {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: .3em;
+}
+
+.description {
+    text-transform: capitalize;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
 .search>button {
     margin: 1em;
     border-radius: 50%;
@@ -63,4 +79,19 @@ body {
     background: #7c7c7c68;
     color: white;
     font-size: 1.4rem;
+}
+
+.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.loading::after {
+    visibility: visible;
+    content: "Loading ...";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 1em;
 }

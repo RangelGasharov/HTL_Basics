@@ -8,7 +8,7 @@
 }
 
 :root {
-    --size: 20em;
+    --size: 300px;
 }
 
 body {
@@ -45,6 +45,23 @@ body {
     box-shadow: 0 15 35px rgba(0, 0, 0, 0, 0.25);
 }
 
+.container .notes .note::before {
+    content: "Double click to remove this note";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 0 1em;
+    font-size: 0.85em;
+    opacity: 0;
+    transition: 500ms;
+}
+
+.container .notes .note:hover::before {
+    opacity: 1;
+}
+
 #create {
     position: relative;
     width: var(--size);
@@ -54,9 +71,32 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.createBox {
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    z-index: 1000;
+    display: none;
+}
+
+.createBox textarea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--size);
+    height: var(--size);
+    outline: none;
+    padding: 1em;
+    font-size: 1em;
 }
 
 .fa-plus {
+    position: absolute;
     font-size: 10em;
     color: #fff;
 }

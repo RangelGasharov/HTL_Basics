@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=REM:wght@500&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: "REM";
+}
+
+:root {
+    --size: 250px;
+    --border-radius: 10px;
+}
+
+body {
+    margin: 0;
+    background: #284395;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--size));
+    padding: 1.5em;
+    gap: 1.5em;
+}
+
+.note {
+    height: var(--size);
+    padding: 1em;
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, 0.2);
+    resize: none;
+    font-size: 1.2em;
+}
+
+.add-note {
+    height: var(--size);
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: var(--border-radius);
+    font-size: 10em;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background 200ms;
+}
+
+.add-note:hover {
+    background: rgba(0, 0, 0, 0.25);
+}

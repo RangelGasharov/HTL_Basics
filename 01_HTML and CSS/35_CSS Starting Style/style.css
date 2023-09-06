@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+#btn {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+#card {
+    font-size: 2em;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s, display 1s;
+}
+
+#card.show {
+    @starting-style {
+        opacity: 0;
+    }
+
+    display: block;
+    opacity: 1;
+}

@@ -47,19 +47,30 @@ body {
 }
 
 .btn-option {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     border: none;
     outline: none;
+    text-decoration: inherit;
+    color: inherit;
     border-radius: .2em;
     min-width: 300px;
     aspect-ratio: 1/1;
     font-size: 1.5em;
+    gap: 1em;
 }
 
 .btn-option:hover,
 .btn-option:focus {
     transform: scale(1.03);
     transition: 250ms;
+}
+
+.notification-settings {
+    background: rgba(219, 255, 76, 1);
 }
 
 .water-break {
@@ -76,6 +87,31 @@ body {
 
 .screen-break {
     background: rgba(245, 112, 112, 1);
+}
+
+.notification-img {
+    max-width: 40%;
+    max-height: 40%;
+}
+
+.water-drop-img {
+    max-width: 40%;
+    max-height: 40%;
+}
+
+.air-img {
+    max-width: 40%;
+    max-height: 40%;
+}
+
+.plant-img {
+    max-width: 40%;
+    max-height: 40%;
+}
+
+.monitor-img {
+    max-width: 40%;
+    max-height: 40%;
 }
 
 @media screen and (max-width: 1300px) {

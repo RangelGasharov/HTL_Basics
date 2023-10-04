@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.wrapper-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.container-1 {
+    border: 1px solid black;
+}
+
+.container-1:has(a) {
+    background: green;
+}
+
+.container-1:has(p) {
+    background: red;
+}
+
+.wrapper-2 {
+    background-color: beige;
+}
+
+.wrapper-2 :is(h3, h4, a) {
+    color: blue;
+}
+
+a:is(:hover, :focus) {
+    color: purple;
+}
+
+.wrapper-3 {
+    background-color: antiquewhite;
+}
+
+.wrapper-3 h3 {
+    color: red;
+}
+
+.wrapper-3 :where(h3, h4, a) {
+    color: green;
+}

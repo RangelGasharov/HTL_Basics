@@ -104,3 +104,46 @@ header {
     align-items: center;
     top: 0;
 }
+
+.p-1::first-letter {
+    color: red;
+    initial-letter: 4 3;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: bolder;
+    color: green;
+}
+
+.card {
+    border: 1px solid black;
+}
+
+@scope (.card) {
+    div {
+        color: red;
+        font-size: 1.5em;
+    }
+}
+
+#toggle-btn {
+    font-size: 1.5em;
+}
+
+.animation-card {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s;
+    font-size: 2em;
+    border: 1px solid black;
+}
+
+.animation-card.show {
+    @starting-style {
+        opacity: 0;
+    }
+
+    display: block;
+    opacity: 1;
+}

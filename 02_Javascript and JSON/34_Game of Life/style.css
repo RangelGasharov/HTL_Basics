@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.field {
+    border: 1px solid black;
+}
+
+.cell {
+    width: 10px;
+    height: 10px;
+    border: 1px black;
+}
+
+.filled {
+    background-color: black;
+}
+
+.empty {
+    background-color: white;
+}

@@ -79,8 +79,8 @@ console.count("Name")
 
 console.log("")
 
-function main(){
-    console.trace()  
+function main() {
+    console.trace()
 }
 main()
 

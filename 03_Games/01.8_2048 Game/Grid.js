@@ -15,6 +15,14 @@ export default class Grid {
         })
     }
 
+    get cellsByColumn() {
+        return this.#cells.reduce((cellGrid, cell) => {
+            cellGrid[cell.x] = cellGrid[cell.x] || [];
+            cellGrid[cell.x][cell.y] = cell;
+            return cellGrid;
+        }, [])
+    }
+
     get #emptyCells() {
         return this.#cells.filter(cell => cell.tile == null);
     }
@@ -35,6 +43,14 @@ class Cell {
         this.#cellElement = cellElement;
         this.#x = x;
         this.#y = y;
+    }
+
+    get x() {
+        return this.#x;
+    }
+
+    get y() {
+        return this.#y;
     }
 
     get tile() {

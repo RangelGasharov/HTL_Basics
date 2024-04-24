@@ -12,4 +12,14 @@ function amountOfBoomerangs(array) {
     return amountOfBoomerangs;
 }
 
+function possibleBonus(a, b) {
+    if (a >= b) { return false; }
+    if (b - a > 6) { return false; }
+    return true;
+}
+
 console.log(amountOfBoomerangs([1, 3, 1, 3, 2, 1, -8, 1, -8, 6, -5, 6]))
+
+console.log(possibleBonus(4, 10));
+console.log(possibleBonus(1, 10));
+console.log(possibleBonus(10, 10));

@@ -42,3 +42,19 @@ console.log(getGeneration(-3, "m"))
 console.log(getGeneration(-2, "f"))
 console.log(getGeneration(1, "f"))
 console.log(getGeneration(0, "m"))
+
+function bitwiseAND(n1, n2) {
+    return n1 & n2;
+}
+
+function bitwiseOR(n1, n2) {
+    return n1 | n2;
+}
+
+function bitwiseXOR(n1, n2) {
+    return n1 ^ n2;
+}
+
+console.log(bitwiseAND(1, 6))
+console.log(bitwiseOR(4, 5))
+console.log(bitwiseXOR(3, 9))

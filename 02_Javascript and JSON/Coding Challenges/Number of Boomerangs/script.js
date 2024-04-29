@@ -12,7 +12,7 @@ function amountOfBoomerangs(array) {
     return amountOfBoomerangs;
 }
 
-console.log(amountOfBoomerangs([1, 3, 1, 3, 2, 1, -8, 1, -8, 6, -5, 6]))
+/*console.log(amountOfBoomerangs([1, 3, 1, 3, 2, 1, -8, 1, -8, 6, -5, 6]))*/
 
 function possibleBonus(a, b) {
     if (a >= b) { return false; }
@@ -20,9 +20,9 @@ function possibleBonus(a, b) {
     return true;
 }
 
-console.log(possibleBonus(4, 10));
+/*console.log(possibleBonus(4, 10));
 console.log(possibleBonus(1, 10));
-console.log(possibleBonus(10, 10));
+console.log(possibleBonus(10, 10));*/
 
 
 function getGeneration(x, y) {
@@ -38,10 +38,10 @@ function getGeneration(x, y) {
     return generations[x][y];
 }
 
-console.log(getGeneration(-3, "m"))
+/*console.log(getGeneration(-3, "m"))
 console.log(getGeneration(-2, "f"))
 console.log(getGeneration(1, "f"))
-console.log(getGeneration(0, "m"))
+console.log(getGeneration(0, "m"))*/
 
 function bitwiseAND(n1, n2) {
     return n1 & n2;
@@ -55,6 +55,26 @@ function bitwiseXOR(n1, n2) {
     return n1 ^ n2;
 }
 
-console.log(bitwiseAND(1, 6))
+/*console.log(bitwiseAND(1, 6))
 console.log(bitwiseOR(4, 5))
-console.log(bitwiseXOR(3, 9))
+console.log(bitwiseXOR(3, 9))*/
+
+function oddishOrEvenish(num) {
+    let digit = [];
+    let sum = 0;
+
+    while (num > 0) {
+        digit.unshift(num % 10);
+        num = Math.floor(num / 10);
+    }
+    for (let i = 0; i < digit.length; i++) {
+        sum += digit[i];
+    }
+    if (sum % 2 === 0) {
+        return "Evenish";
+    } else {
+        return "Oddish";
+    }
+}
+
+/*console.log(oddishOrEvenish(9201))*/

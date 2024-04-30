@@ -78,3 +78,12 @@ function oddishOrEvenish(num) {
 }
 
 /*console.log(oddishOrEvenish(9201))*/
+
+function combinations(...args) {
+    const validArgs = args.filter(arg => arg !== 0);
+    if (validArgs.length === 0) { return 0; }
+    return validArgs.reduce((acc, val) => acc * val, 1);
+}
+
+/*console.log(combinations(2, 4, 5, 6, 6));
+console.log(combinations(0, 1, 5));*/

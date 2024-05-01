@@ -87,3 +87,10 @@ function combinations(...args) {
 
 /*console.log(combinations(2, 4, 5, 6, 6));
 console.log(combinations(0, 1, 5));*/
+
+function perimeter(l, num) {
+    return (l === "s" && 4 * num) || (l === "c" && 6.28 * num);
+}
+
+/*console.log(perimeter("c", 3))
+console.log(perimeter("s", 3))*/

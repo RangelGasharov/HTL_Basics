@@ -94,3 +94,11 @@ function perimeter(l, num) {
 
 /*console.log(perimeter("c", 3))
 console.log(perimeter("s", 3))*/
+
+
+function numOfDigits(num) {
+    return Math.abs(num).toString().length;
+}
+
+/*console.log(numOfDigits(12345));
+console.log(numOfDigits(0));*/

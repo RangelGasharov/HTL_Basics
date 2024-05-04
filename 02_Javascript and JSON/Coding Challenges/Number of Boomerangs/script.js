@@ -102,3 +102,10 @@ function numOfDigits(num) {
 
 /*console.log(numOfDigits(12345));
 console.log(numOfDigits(0));*/
+
+function getDerivative(b, m) {
+    return b * m ** (b - 1);
+}
+
+/*console.log(getDerivative(2, 10));
+console.log(getDerivative(4, Math.E));*/

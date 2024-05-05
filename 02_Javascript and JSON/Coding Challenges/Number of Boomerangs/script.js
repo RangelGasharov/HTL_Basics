@@ -109,3 +109,10 @@ function getDerivative(b, m) {
 
 /*console.log(getDerivative(2, 10));
 console.log(getDerivative(4, Math.E));*/
+
+function shiftToRight(x, y) {
+    return Math.floor(x / 2 ** y);
+}
+
+/* shiftToRight(80, 3)
+shiftToRight(-512,10)*/

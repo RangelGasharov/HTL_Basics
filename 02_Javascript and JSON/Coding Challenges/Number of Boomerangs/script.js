@@ -116,3 +116,16 @@ function shiftToRight(x, y) {
 
 /* shiftToRight(80, 3)
 shiftToRight(-512,10)*/
+
+function tetra(n) {
+    let sum = 0;
+    let i = 0;
+    while (i <= n) {
+        sum += i * (n - i + 1);
+        i++;
+    }
+    return sum;
+}
+
+/*console.log(tetra(6));
+console.log(tetra(45));*/

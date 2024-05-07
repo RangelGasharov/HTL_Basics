@@ -129,3 +129,8 @@ function tetra(n) {
 
 /*console.log(tetra(6));
 console.log(tetra(45));*/
+
+
+function triangle(n) {
+    return n * (n + 1) / 2;
+}

@@ -134,3 +134,17 @@ console.log(tetra(45));*/
 function triangle(n) {
     return n * (n + 1) / 2;
 }
+
+function changeEnough(change, amountDue) {
+    let sumOfChange = 0;
+    let values = [0.25, 0.1, 0.05, 0.01];
+    for (let i = 0; i < change.length; i++) {
+        sumOfChange += change[i] * values[i];
+    }
+    return amountDue > sumOfChange ? false : true;
+}
+
+/* console.log(changeEnough([2, 100, 0, 0], 14.11));
+console.log(changeEnough([0, 0, 20, 5], 0.75));
+console.log(changeEnough([10, 0, 0, 50], 3.85));
+console.log(changeEnough([30, 40, 20, 5], 12.55));*/

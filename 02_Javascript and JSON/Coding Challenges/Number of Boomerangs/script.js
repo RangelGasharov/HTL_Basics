@@ -148,3 +148,14 @@ function changeEnough(change, amountDue) {
 console.log(changeEnough([0, 0, 20, 5], 0.75));
 console.log(changeEnough([10, 0, 0, 50], 3.85));
 console.log(changeEnough([30, 40, 20, 5], 12.55));*/
+
+function intWithinBounds(n, low, high) {
+    if (n < high && n > low) {
+        return n % 1 == 0 ? true : false;
+    }
+    return false;
+}
+
+/* console.log(intWithinBounds(3, 1, 9));
+console.log(intWithinBounds(6, 1, 6));
+console.log(intWithinBounds(4.5, 3, 8));*/

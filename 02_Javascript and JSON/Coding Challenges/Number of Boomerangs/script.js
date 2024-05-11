@@ -159,3 +159,17 @@ function intWithinBounds(n, low, high) {
 /* console.log(intWithinBounds(3, 1, 9));
 console.log(intWithinBounds(6, 1, 6));
 console.log(intWithinBounds(4.5, 3, 8));*/
+
+function countTrue(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === true) {
+            sum += 1;
+        }
+    }
+    return sum;
+}
+
+/* console.log(countTrue([true, false, false, true, false]));
+console.log(countTrue([false, true, false, false]));
+console.log(countTrue([]));*/

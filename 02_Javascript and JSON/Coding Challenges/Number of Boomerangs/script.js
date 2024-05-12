@@ -173,3 +173,12 @@ function countTrue(arr) {
 /* console.log(countTrue([true, false, false, true, false]));
 console.log(countTrue([false, true, false, false]));
 console.log(countTrue([]));*/
+
+function areaOfCountry(countryName, countryArea) {
+    const worldArea = 148_940_000;
+    console.log(`${countryName} is ${Math.round(countryArea * 10000 / worldArea) / 100}% of the total world's landmass.`);
+}
+
+/* areaOfCountry("Russia", 17_098_242);
+areaOfCountry("USA", 9_372_610);
+areaOfCountry("Iran", 1_648_195);*/

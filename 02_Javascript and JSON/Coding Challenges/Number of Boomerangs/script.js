@@ -182,3 +182,21 @@ function areaOfCountry(countryName, countryArea) {
 /* areaOfCountry("Russia", 17_098_242);
 areaOfCountry("USA", 9_372_610);
 areaOfCountry("Iran", 1_648_195);*/
+
+function getTotalPrice(purchases) {
+    let totalPrice = purchases.reduce(function (accumulator, currentPurchase) {
+        return accumulator + currentPurchase.price * currentPurchase.quantity;
+    }, 0)
+    return totalPrice;
+}
+
+/* console.log(getTotalPrice([
+    { product: "Milk", quantity: 1, price: 1.50 },
+    { product: "Eggs", quantity: 12, price: 0.10 },
+    { product: "Bread", quantity: 2, price: 1.60 },
+    { product: "Cheese", quantity: 1, price: 4.50 }
+]));
+
+console.log(getTotalPrice([
+    { product: "Milk", quantity: 3, price: 1.50 }
+]))*/

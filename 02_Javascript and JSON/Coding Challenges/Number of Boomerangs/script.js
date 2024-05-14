@@ -200,3 +200,17 @@ function getTotalPrice(purchases) {
 console.log(getTotalPrice([
     { product: "Milk", quantity: 3, price: 1.50 }
 ]))*/
+
+function doesBrickFit(a, b, c, w, h) {
+    let dimensionsBrick = [a, b, c];
+    dimensionsBrick.sort((a, b) => a - b);
+    if ((dimensionsBrick[0] <= w && dimensionsBrick[1] <= h)
+        || (dimensionsBrick[0] <= h && dimensionsBrick[1] <= w)) {
+        return true;
+    }
+    return false;
+}
+
+/* console.log(doesBrickFit(40, 40, 30, 100, 30));
+console.log(doesBrickFit(1, 2, 1, 1, 1));
+console.log(doesBrickFit(3, 1, 2, 1, 1));*/

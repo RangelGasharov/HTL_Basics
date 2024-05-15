@@ -214,3 +214,17 @@ function doesBrickFit(a, b, c, w, h) {
 /* console.log(doesBrickFit(40, 40, 30, 100, 30));
 console.log(doesBrickFit(1, 2, 1, 1, 1));
 console.log(doesBrickFit(3, 1, 2, 1, 1));*/
+
+function sevenBoom(array) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].toString().includes("7")) {
+            console.log("Boom");
+            return;
+        }
+    }
+    console.log("there is no 7 in the array")
+}
+
+sevenBoom([1, 2, 3, 4, 5, 6, 7]);
+sevenBoom([8, 6, 33, 100]);
+sevenBoom([2, 55, 60, 97, 86]);

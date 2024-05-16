@@ -225,6 +225,20 @@ function sevenBoom(array) {
     console.log("there is no 7 in the array")
 }
 
-sevenBoom([1, 2, 3, 4, 5, 6, 7]);
+/* sevenBoom([1, 2, 3, 4, 5, 6, 7]);
 sevenBoom([8, 6, 33, 100]);
-sevenBoom([2, 55, 60, 97, 86]);
+sevenBoom([2, 55, 60, 97, 86]);*/
+
+function getPrimeFactorization(a) {
+    let primeFactors = [];
+    if (a == 1) { return [1]; }
+    for (let i = 2; i <= Math.ceil(Math.sqrt(a)); i++) {
+        while (a % i == 0) {
+            primeFactors.push(i);
+            a /= i;
+        }
+    }
+    return primeFactors;
+}
+
+/* console.log(getPrimeFactorization(1));*/

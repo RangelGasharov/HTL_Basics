@@ -230,9 +230,10 @@ sevenBoom([8, 6, 33, 100]);
 sevenBoom([2, 55, 60, 97, 86]);*/
 
 function getPrimeFactorization(a) {
+    let b = a;
     let primeFactors = [];
     if (a == 1) { return [1]; }
-    for (let i = 2; i <= Math.ceil(Math.sqrt(a)); i++) {
+    for (let i = 2; i <= a; i++) {
         while (a % i == 0) {
             primeFactors.push(i);
             a /= i;
@@ -241,4 +242,57 @@ function getPrimeFactorization(a) {
     return primeFactors;
 }
 
-/* console.log(getPrimeFactorization(1));*/
+function lcm(a, b) {
+    let arrayA = getPrimeFactorization(a);
+    let arrayB = getPrimeFactorization(b);
+    let combinedArray = combineArrays(arrayA, arrayB);
+    let result = 1;
+    for (let i = 0; i < combinedArray.length; i++) {
+        result *= combinedArray[i];
+    }
+    return result;
+}
+
+/* console.log(getPrimeFactorization(124));*/
+
+function combineArrays(arr1, arr2) {
+    const count1 = {};
+    const count2 = {};
+    arr1.forEach(element => {
+        count1[element] = (count1[element] || 0) + 1;
+    });
+    arr2.forEach(element => {
+        count2[element] = (count2[element] || 0) + 1;
+    });
+    const combined = arr1.slice();
+    for (let element in count2) {
+        const countInArr1 = count1[element] || 0;
+        const countInArr2 = count2[element];
+        const difference = countInArr2 - countInArr1;
+        if (difference > 0) {
+            for (let i = 0; i < difference; i++) {
+                combined.push(Number(element));
+            }
+        }
+    }
+    return combined;
+}
+
+function lcm2(a, b) {
+    let lar = Math.max(a, b);
+    let small = Math.min(a, b);
+    for (i = lar; ; i += lar) {
+        if (i % small == 0)
+            return i;
+    }
+};
+
+let startAt = performance.now();
+console.log(lcm(15485863, 524287));
+let endAt = performance.now();
+console.log(`LCM function 1 time: ${endAt - startAt} ms`);
+
+startAt = performance.now();
+console.log(lcm2(15485863, 524287));
+endAt = performance.now();
+console.log(`LCM function 2 time: ${endAt - startAt} ms`);

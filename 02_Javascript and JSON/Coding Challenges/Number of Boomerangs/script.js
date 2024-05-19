@@ -287,12 +287,15 @@ function lcm2(a, b) {
     }
 };
 
-let startAt = performance.now();
 console.log(lcm(15485863, 524287));
-let endAt = performance.now();
-console.log(`LCM function 1 time: ${endAt - startAt} ms`);
+console.log(`LCM function 1 time: ${checkTimeLCM(lcm, 15485863, 524287)} ms`);
 
-startAt = performance.now();
 console.log(lcm2(15485863, 524287));
-endAt = performance.now();
-console.log(`LCM function 2 time: ${endAt - startAt} ms`);
+console.log(`LCM function 2 time: ${checkTimeLCM(lcm2, 15485863, 524287)} ms`);
+
+function checkTimeLCM(givenFunction, a, b) {
+    let startAt = performance.now();
+    givenFunction(a, b);
+    let endAt = performance.now();
+    return endAt - startAt;
+}

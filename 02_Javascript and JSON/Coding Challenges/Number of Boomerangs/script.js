@@ -287,15 +287,28 @@ function lcm2(a, b) {
     }
 };
 
-console.log(lcm(15485863, 524287));
-console.log(`LCM function 1 time: ${checkTimeLCM(lcm, 15485863, 524287)} ms`);
-
-console.log(lcm2(15485863, 524287));
-console.log(`LCM function 2 time: ${checkTimeLCM(lcm2, 15485863, 524287)} ms`);
-
-function checkTimeLCM(givenFunction, a, b) {
+function checkTimeLCM(lcmFunction, a, b) {
     let startAt = performance.now();
-    givenFunction(a, b);
+    lcmFunction(a, b);
     let endAt = performance.now();
     return endAt - startAt;
 }
+
+/* console.log(lcm(15485863, 524287));
+console.log(`LCM function 1 time: ${checkTimeLCM(lcm, 15485863, 524287)} ms`);
+console.log(lcm2(15485863, 524287));
+console.log(`LCM function 2 time: ${checkTimeLCM(lcm2, 15485863, 524287)} ms`);*/
+
+function lcmExecutionTimes(lcmFunction, end) {
+    let executionTimes = [];
+    for (let i = 1; i < end; i++) {
+        let time = checkTimeLCM(lcmFunction, i, 524287)
+        executionTimes.push(time);
+    }
+    return executionTimes;
+}
+
+/* console.log("LCM function 1 times:");
+console.log(lcmExecutionTimes(lcm, 1000));
+console.log("LCM function 2 times:");
+console.log(lcmExecutionTimes(lcm2, 1000));*/

@@ -312,3 +312,16 @@ function lcmExecutionTimes(lcmFunction, end) {
 console.log(lcmExecutionTimes(lcm, 1000));
 console.log("LCM function 2 times:");
 console.log(lcmExecutionTimes(lcm2, 1000));*/
+
+function isPositiveDominant(array) {
+    let amountOfPositive = 0;
+    let amountOfNegative = 0;
+    for (let i = 0; i < array.length; i++) {
+        array[i] > 0 ? amountOfPositive += 1 : (array[i] == 0 ? null : amountOfNegative += 1);
+    }
+    return amountOfPositive > amountOfNegative ? true : false;
+}
+
+/* console.log(isPositiveDominant([5, 99, 832, -3, -4]));
+console.log(isPositiveDominant([5, 0]));
+console.log(isPositiveDominant([0, -4, -1]));*/

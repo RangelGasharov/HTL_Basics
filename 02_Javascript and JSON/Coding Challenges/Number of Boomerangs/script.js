@@ -325,3 +325,22 @@ function isPositiveDominant(array) {
 /* console.log(isPositiveDominant([5, 99, 832, -3, -4]));
 console.log(isPositiveDominant([5, 0]));
 console.log(isPositiveDominant([0, -4, -1]));*/
+
+function isPandigital(number) {
+    let digits = number.toString().split('').map(Number);
+    let digitAvailable = Array(10).fill(false);
+
+    for (let i = 0; i < digits.length; i++) {
+        let currentNum = digits[i];
+        digitAvailable[currentNum] = true;
+    }
+
+    for (let i = 0; i < digitAvailable.length; i++) {
+        if (!digitAvailable[i]) { return false; }
+    }
+    return true;
+}
+
+/*console.log(isPandigital(1234))
+console.log(isPandigital(984072356890))
+console.log(isPandigital(1234567890));*/

@@ -344,3 +344,14 @@ function isPandigital(number) {
 /*console.log(isPandigital(1234))
 console.log(isPandigital(984072356890))
 console.log(isPandigital(1234567890));*/
+
+function compact(array) {
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i]) { newArray.push(array[i]); }
+    }
+    return newArray;
+}
+
+/* console.log(compact([0, 1, false, 2, "", 3]));
+console.log(compact([null, 1, undefined, 2, NaN, 3, null])); */

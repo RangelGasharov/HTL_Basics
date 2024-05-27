@@ -355,3 +355,12 @@ function compact(array) {
 
 /* console.log(compact([0, 1, false, 2, "", 3]));
 console.log(compact([null, 1, undefined, 2, NaN, 3, null])); */
+
+function countDigitsWithoutString(num) {
+    num = Math.abs(num);
+    let count = Math.floor(Math.log10(num)) + 1;
+    return count;
+}
+
+/* console.log(countDigitsWithoutString(1));
+console.log(countDigitsWithoutString(-123456));*/

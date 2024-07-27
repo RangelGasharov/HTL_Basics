@@ -1,0 +1,92 @@
+.title-inline {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: lightgreen;
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.text-inline {
+    display: inline;
+    background-color: rgb(195, 123, 123);
+}
+
+.title-max-content {
+    margin-top: 1rem;
+    background-color: lightgreen;
+    font-weight: bold;
+    font-size: 4rem;
+    width: max-content;
+}
+
+.text-max-content {
+    background-color: rgb(195, 123, 123);
+    width: max-content;
+}
+
+.title-min-content {
+    margin-top: 1rem;
+    background-color: lightgreen;
+    font-weight: bold;
+    font-size: 4rem;
+    width: min-content;
+}
+
+.text-min-content {
+    background-color: rgb(195, 123, 123);
+    width: min-content;
+}
+
+.title-fit-content {
+    margin-top: 1rem;
+    background-color: lightgreen;
+    font-weight: bold;
+    font-size: 4rem;
+    width: fit-content;
+}
+
+.text-fit-content {
+    background-color: rgb(195, 123, 123);
+    width: fit-content;
+}
+
+.title-fit-content-function {
+    margin-top: 1rem;
+    background-color: lightgreen;
+    font-weight: bold;
+    font-size: 4rem;
+    width: fit-content(10vw);
+}
+
+.text-fit-content-function-grid {
+    background-color: rgb(195, 123, 123);
+    display: grid;
+    grid-template-columns: fit-content(30vw);
+}
+
+.title-min-max {
+    margin-top: 1rem;
+    background-color: lightgreen;
+    font-weight: bold;
+    font-size: 4rem;
+    width: fit-content(10vw);
+}
+
+.text-min-max-grid {
+    background-color: rgb(195, 123, 123);
+    display: grid;
+    grid-template-columns: minmax(50vw, auto);
+}
+
+.title-clamp-function {
+    margin-top: 1rem;
+    background-color: lightgreen;
+    font-weight: bold;
+    font-size: clamp(2rem, 10vw, 5rem);
+}
+
+.text-clamp-function-grid {
+    background-color: rgb(195, 123, 123);
+    display: grid;
+    grid-template-columns: minmax(50vw, auto);
+}

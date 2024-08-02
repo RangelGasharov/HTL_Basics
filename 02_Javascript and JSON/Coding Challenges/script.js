@@ -379,3 +379,20 @@ function millionsRounding(array) {
     ["Naples", 2186853],
     ["Vatican City", 572]
 ])) */
+
+function colorPatternTimes(listOfColors) {
+    let totalTimeInSeconds = 0;
+    for (let i = 0; i < listOfColors.length - 1; i++) {
+        if (listOfColors[i] !== listOfColors[i + 1]) {
+            totalTimeInSeconds += 1
+        }
+        totalTimeInSeconds += 2
+    }
+    totalTimeInSeconds += 2
+    return totalTimeInSeconds
+}
+
+/* console.log(colorPatternTimes(["Red", "Blue", "Red", "Blue", "Red"]));
+console.log(colorPatternTimes(["Red", "Yellow", "Green", "Blue"]));
+console.log(colorPatternTimes(["Blue", "Blue", "Blue", "Red", "Red", "Red"]));
+console.log(colorPatternTimes(["Red", "Green", "Blue", "Yellow", "Red", "Red", "Yellow", "Green", "Green", "Green", "Red", "Blue", "Yellow", "Blue", "Green", "Green", "Red", "Red", "Red", "Blue", "Green", "Red", "Blue", "Blue", "Red", "Blue"]));*/

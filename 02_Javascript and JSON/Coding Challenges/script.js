@@ -396,3 +396,50 @@ function colorPatternTimes(listOfColors) {
 console.log(colorPatternTimes(["Red", "Yellow", "Green", "Blue"]));
 console.log(colorPatternTimes(["Blue", "Blue", "Blue", "Red", "Red", "Red"]));
 console.log(colorPatternTimes(["Red", "Green", "Blue", "Yellow", "Red", "Red", "Yellow", "Green", "Green", "Green", "Red", "Blue", "Yellow", "Blue", "Green", "Green", "Red", "Red", "Red", "Blue", "Green", "Red", "Blue", "Blue", "Red", "Blue"]));*/
+
+function reverseOdd(text) {
+    let separatedWords = separateWords(text);
+    let reversedWords = reverseOddWords(separatedWords);
+    let finalSentence = formSentence(reversedWords);
+    return finalSentence;
+}
+
+function reverseOddWords(words) {
+    let reversedWords = [];
+    words.forEach(word => {
+        word.length % 2 == 0 ? reversedWords.push(word) : reversedWords.push(word.split("").reverse().join(""));
+    });
+    return reversedWords;
+}
+
+function formSentence(words) {
+    let sentence = "";
+    for (let i = 0; i < words.length; i++) {
+        sentence += words[i] + " ";
+    }
+    sentence.slice(0, -1)
+    return sentence;
+}
+
+function separateWords(text) {
+    let separatedWords = [];
+    let currentWord = "";
+    for (let i = 0; i < text.length; i++) {
+        if (text[i] == " ") {
+            separatedWords.push(currentWord);
+            currentWord = "";
+        }
+        else if (i == text.length - 1) {
+            currentWord += text[i];
+            separatedWords.push(currentWord);
+        }
+        else {
+            currentWord += text[i];
+        }
+    }
+    return separatedWords;
+}
+
+/* console.log(reverseOdd("Bananas"));
+console.log(reverseOdd("One two three four"));
+console.log(reverseOdd("Make sure uoy only esrever sdrow of ddo length")); */

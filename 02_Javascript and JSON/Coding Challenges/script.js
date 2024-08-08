@@ -443,3 +443,26 @@ function separateWords(text) {
 /* console.log(reverseOdd("Bananas"));
 console.log(reverseOdd("One two three four"));
 console.log(reverseOdd("Make sure uoy only esrever sdrow of ddo length")); */
+
+function itemsPurchased(products, amountOfMoney) {
+    let affordableProducts = [];
+    for (const [productName, productPrice] of Object.entries(products)) {
+        if (getPriceAsNumber(productPrice) <= getPriceAsNumber(amountOfMoney)) { affordableProducts.push(productName); }
+    }
+    if (affordableProducts.length === 0) {
+        return "Nothing";
+    }
+    return affordableProducts.sort();
+}
+
+function getPriceAsNumber(price) {
+    let priceAsString = "";
+    for (const char of price) {
+        if (!isNaN(parseInt(char))) { priceAsString += char };
+    }
+    return parseFloat(priceAsString);
+}
+
+/* console.log(itemsPurchased({ Water: "$1", Bread: "$3", TV: "$1,000", Fertilizer: "$20" }, "$300"));
+console.log(itemsPurchased({ Apple: "$4", Honey: "$3", Fan: "$14", Bananas: "$4", Pan: "$100", Spoon: "$2" }, "$100"));
+console.log(itemsPurchased({ Phone: "$999", Speakers: "$300", Laptop: "$5,000", PC: "$1200" }, "$1")); */

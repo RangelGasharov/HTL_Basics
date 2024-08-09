@@ -466,3 +466,45 @@ function getPriceAsNumber(price) {
 /* console.log(itemsPurchased({ Water: "$1", Bread: "$3", TV: "$1,000", Fertilizer: "$20" }, "$300"));
 console.log(itemsPurchased({ Apple: "$4", Honey: "$3", Fan: "$14", Bananas: "$4", Pan: "$100", Spoon: "$2" }, "$100"));
 console.log(itemsPurchased({ Phone: "$999", Speakers: "$300", Laptop: "$5,000", PC: "$1200" }, "$1")); */
+
+function isAutobiographical(number) {
+    let numberDictionary = getNumberDictionary(number);
+    let occuranceDictionary = getDigitOccuranceDictionary(number);
+
+    for (const prop in numberDictionary) {
+        if (numberDictionary[prop] == 0) { continue; }
+        if (occuranceDictionary[prop] == null) {
+            return false;
+        } else if (occuranceDictionary[prop] != numberDictionary[prop]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function getNumberDictionary(number) {
+    let numberDictionary = {};
+    let numberAsString = String(number);
+    for (let i = 0; i < numberAsString.length; i++) {
+        numberDictionary[i] = parseInt(numberAsString[i]);
+    }
+    return numberDictionary;
+}
+
+function getDigitOccuranceDictionary(number) {
+    let occuranceDictionary = {};
+    let numberAsString = String(number);
+    for (let i = 0; i < numberAsString.length; i++) {
+        if (occuranceDictionary[parseInt(numberAsString[i])] == null) {
+            occuranceDictionary[parseInt(numberAsString[i])] = 0;
+        }
+        occuranceDictionary[parseInt(numberAsString[i])] += 1;
+    }
+    return occuranceDictionary;
+}
+
+/* console.log(isAutobiographical(6210001000));
+console.log(isAutobiographical(12345));
+console.log(isAutobiographical(1210));
+console.log(isAutobiographical(638));
+console.log(isAutobiographical(3211000)); */

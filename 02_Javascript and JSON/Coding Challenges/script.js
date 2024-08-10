@@ -430,11 +430,15 @@ function separateWords(text) {
             currentWord = "";
         }
         else if (i == text.length - 1) {
-            currentWord += text[i];
+            if (text[i].match(/^[a-z0-9]+$/i)) {
+                currentWord += text[i];
+            }
             separatedWords.push(currentWord);
         }
         else {
-            currentWord += text[i];
+            if (text[i].match(/^[a-z0-9]+$/i)) {
+                currentWord += text[i];
+            }
         }
     }
     return separatedWords;
@@ -527,3 +531,27 @@ function isValidNote(note) {
     { "name": "John", "notes": [3, 2, 5, 0, -3] },
     { "name": "Emma", "notes": [1, 4, 5, 4, 1, -7] }
 ])); */
+
+function getHashTags(sentence) {
+    let separatedWords = separateWords(sentence);
+    let longestWords = getLongestWords(separatedWords);
+    let hashtagWords = getHashTagOfWords(longestWords);
+    return hashtagWords;
+}
+
+function getLongestWords(words) {
+    let amountOfLongestWords = words.length >= 3 ? 3 : words.length;
+    let sortedWords = words.sort((a, b) => b.length - a.length);
+    let longestWords = sortedWords.slice(0, amountOfLongestWords);
+    return longestWords;
+}
+
+function getHashTagOfWords(words) {
+    let modifiedWords = words.map(word => "#" + word.toLowerCase()).flat();
+    return modifiedWords;
+}
+
+/* console.log(getHashTags("How the Avocado Became the Fruit of the Global Trade"));
+console.log(getHashTags("Why You Will Probably Pay More for Your Christmas Tree This Year"));
+console.log(getHashTags("Hey Parents, Surprise, Fruit Juice Is Not Fruit"));
+console.log(getHashTags("Visualizing Science")); */

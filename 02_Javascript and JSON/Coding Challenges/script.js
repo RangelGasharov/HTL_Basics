@@ -508,3 +508,22 @@ console.log(isAutobiographical(12345));
 console.log(isAutobiographical(1210));
 console.log(isAutobiographical(638));
 console.log(isAutobiographical(3211000)); */
+
+function getNotesDistribution(students) {
+    let validNotes = students.map(student => student.notes.filter(isValidNote)).flat();
+    let noteCounts = validNotes.reduce((acc, note) => {
+        acc[note] = (acc[note] || 0) + 1;
+        return acc;
+    }, {})
+    return noteCounts;
+}
+
+function isValidNote(note) {
+    return note > 0 && note < 6;
+}
+
+/* console.log(getNotesDistribution([
+    { "name": "Steve", "notes": [5, 5, 3, -1, 6] },
+    { "name": "John", "notes": [3, 2, 5, 0, -3] },
+    { "name": "Emma", "notes": [1, 4, 5, 4, 1, -7] }
+])); */

@@ -555,3 +555,21 @@ function getHashTagOfWords(words) {
 console.log(getHashTags("Why You Will Probably Pay More for Your Christmas Tree This Year"));
 console.log(getHashTags("Hey Parents, Surprise, Fruit Juice Is Not Fruit"));
 console.log(getHashTags("Visualizing Science")); */
+
+function invert(rgbArray) {
+    let modifiedRGBArray = rgbArray.map(rgbRow => rgbRow.map(rgbValues => rgbValues.map(rgbValue => modifyRGBValue(rgbValue))));
+    return modifiedRGBArray;
+}
+
+function modifyRGBValue(value) {
+    let result = 255 - value;
+    if (result > 255) {
+        return 255;
+    } else if (result < 0) {
+        return 0;
+    }
+    return result;
+}
+
+console.log(invert([[[0, 255, 255], [256, 255, 255]], [[255, -1, 255], [255, 255, 255]]]));
+console.log(invert([[[0, 0, 0], [0, 0, 0], [0, 0, 0]], [[0, 0, 0], [0, 0, 0], [0, 0, 0]], [[0, 0, 0], [0, 0, 0], [0, 0, 0]]]));

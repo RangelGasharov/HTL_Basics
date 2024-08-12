@@ -608,3 +608,22 @@ console.log(grayscale([
     [[15, 15, 15], [42, 42, 42], [8, 8, 8], [46, 46, 46]],
     [[67, 67, 67], [42, 42, 42], [3, 3, 3], [67, 67, 67]]
 ]); */
+
+function convertTime(time) {
+    let timeType = time.slice(-2);
+    let hours = parseInt(time.slice(0, 2)) + 12 * (timeType == "PM");
+    hours -= 12 * (timeType == "AM" && hours >= 12) + 12 * (timeType == "PM" && hours >= 24);
+    let minutes = parseInt(time.slice(3, 5));
+    let seconds = parseInt(time.slice(6, 8));
+    let hoursAsString = `${(hours < 10) ? "0" : ""}${hours}`;
+    let minutesAsString = `${(minutes < 10) ? "0" : ""}${minutes}`;
+    let secondsAsString = `${(seconds < 10) ? "0" : ""}${seconds}`;
+    return `${hoursAsString}:${minutesAsString}:${secondsAsString}`;
+}
+
+/* console.log(convertTime("07:05:45PM"));
+console.log(convertTime("12:40:22AM"));
+console.log(convertTime("12:45:54PM"));
+console.log(convertTime("11:59:59AM"));
+console.log(convertTime("11:59:59PM"));
+console.log(convertTime("12:40:22AM")); */

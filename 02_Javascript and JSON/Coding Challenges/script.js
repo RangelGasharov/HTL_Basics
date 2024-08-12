@@ -557,11 +557,11 @@ console.log(getHashTags("Hey Parents, Surprise, Fruit Juice Is Not Fruit"));
 console.log(getHashTags("Visualizing Science")); */
 
 function invert(rgbArray) {
-    let modifiedRGBArray = rgbArray.map(rgbRow => rgbRow.map(rgbValues => rgbValues.map(rgbValue => modifyRGBValue(rgbValue))));
+    let modifiedRGBArray = rgbArray.map(rgbRow => rgbRow.map(rgbValues => rgbValues.map(rgbValue => invertRGBValue(rgbValue))));
     return modifiedRGBArray;
 }
 
-function modifyRGBValue(value) {
+function invertRGBValue(value) {
     let result = 255 - value;
     if (result > 255) {
         return 255;
@@ -571,5 +571,40 @@ function modifyRGBValue(value) {
     return result;
 }
 
-console.log(invert([[[0, 255, 255], [256, 255, 255]], [[255, -1, 255], [255, 255, 255]]]));
-console.log(invert([[[0, 0, 0], [0, 0, 0], [0, 0, 0]], [[0, 0, 0], [0, 0, 0], [0, 0, 0]], [[0, 0, 0], [0, 0, 0], [0, 0, 0]]]));
+/* console.log(invert([[[0, 255, 255], [256, 255, 255]], [[255, -1, 255], [255, 255, 255]]]));
+console.log(invert([[[0, 0, 0], [0, 0, 0], [0, 0, 0]], [[0, 0, 0], [0, 0, 0], [0, 0, 0]], [[0, 0, 0], [0, 0, 0], [0, 0, 0]]])); */
+
+function grayscale(rgbArray) {
+    let modifiedRGBArray = rgbArray.map(rgbRow => rgbRow.map(rgbValues => grayscaleRGBValues(rgbValues)));
+    return modifiedRGBArray;
+}
+
+function grayscaleRGBValues(values) {
+    let sumRGBValues = values.reduce((acc, current) => acc + getValidRGBValue(current), 0);
+    let avgRGBValue = Math.round(sumRGBValues / 3);
+
+    return [avgRGBValue, avgRGBValue, avgRGBValue];
+}
+
+function getValidRGBValue(current) {
+    if (current > 255) {
+        return 255;
+    } else if (current < 0) {
+        return 0;
+    }
+    return current;
+}
+
+/* console.log(grayscale([[[0, 0, 0], [0, 0, 157]], [[1, 100, 0], [0, 10, 0]]]));
+console.log(grayscale([[[0, -1, -120], [300, 0, 157]], [[1, 100, 0], [256, 10, 0]]]));
+console.log(grayscale([
+    [[0, 0, 255], [0, 0, 0], [0, 0, 157], [100, 229, 4]],
+    [[100, 0, 3], [1, 100, 0], [0, 10, 0], [0, 168, 0]],
+    [[16, 30, 0], [0, 125, 0], [15, 0, 9], [0, 139, 0]],
+    [[200, 2, 0], [0, 125, 0], [0, 0, 9], [0, 200, 0]]
+]), [
+    [[85, 85, 85], [0, 0, 0], [52, 52, 52], [111, 111, 111]],
+    [[34, 34, 34], [34, 34, 34], [3, 3, 3], [56, 56, 56]],
+    [[15, 15, 15], [42, 42, 42], [8, 8, 8], [46, 46, 46]],
+    [[67, 67, 67], [42, 42, 42], [3, 3, 3], [67, 67, 67]]
+]); */

@@ -645,3 +645,23 @@ function trackRobot(...steps) {
 console.log(trackRobot());
 console.log(trackRobot(-10, 20, 10));
 console.log(trackRobot(0, 1, 0, 2, 0, 3, 0, 4, 0, 5)); */
+
+function doesTriangleFit(triangle1, triangle2) {
+    if (!isTriangle(triangle1) || !isTriangle(triangle2)) { return false };
+    return (triangle1[0] <= triangle2[0] && triangle1[1] <= triangle2[1] && triangle1[2] <= triangle2[2]);
+}
+
+function isTriangle(triangleSides) {
+    triangleSides = triangleSides.sort();
+    if (triangleSides[2] >= triangleSides[0] + triangleSides[1]) { return false };
+    if (triangleSides[0] <= 0) { return false };
+    return true;
+}
+
+/* console.log(doesTriangleFit([1, 1, 1], [1, 1, 1]));
+console.log(doesTriangleFit([1, 1, 1], [2, 2, 2]));
+console.log(doesTriangleFit([1, 2, 3], [1, 2, 2]));
+console.log(doesTriangleFit([1, 2, 4], [1, 2, 6]));
+console.log(doesTriangleFit([3, 6, 8], [23, 63, 42]));
+console.log(doesTriangleFit([3, 6, 8], [1, 10, 8]));
+console.log(doesTriangleFit([1, 6, 8], [1, 6, 8])); */

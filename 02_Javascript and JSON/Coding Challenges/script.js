@@ -627,3 +627,21 @@ console.log(convertTime("12:45:54PM"));
 console.log(convertTime("11:59:59AM"));
 console.log(convertTime("11:59:59PM"));
 console.log(convertTime("12:40:22AM")); */
+
+function trackRobot(...steps) {
+    let xCoordinates = 0;
+    let yCoordinates = 0;
+    const directions = { NORTH: "NORTH", EAST: "EAST", SOUTH: "SOUTH", WEST: "WEST" };
+    const directionOrder = [directions.NORTH, directions.EAST, directions.SOUTH, directions.WEST];
+    for (let i = 0; i < steps.length; i++) {
+        let currentDirection = directionOrder[i % directionOrder.length];
+        xCoordinates += steps[i] * ((currentDirection == directions.EAST) - (currentDirection == directions.WEST));
+        yCoordinates += steps[i] * ((currentDirection == directions.NORTH) - (currentDirection == directions.SOUTH));
+    }
+    return [xCoordinates, yCoordinates];
+}
+
+/* console.log(trackRobot(20, 30, 10, 40));
+console.log(trackRobot());
+console.log(trackRobot(-10, 20, 10));
+console.log(trackRobot(0, 1, 0, 2, 0, 3, 0, 4, 0, 5)); */

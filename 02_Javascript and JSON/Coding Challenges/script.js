@@ -665,3 +665,15 @@ console.log(doesTriangleFit([1, 2, 4], [1, 2, 6]));
 console.log(doesTriangleFit([3, 6, 8], [23, 63, 42]));
 console.log(doesTriangleFit([3, 6, 8], [1, 10, 8]));
 console.log(doesTriangleFit([1, 6, 8], [1, 6, 8])); */
+
+function twins(twinsage, distance, velocity) {
+    const numberFormatter = new Intl.NumberFormat("en", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+    let lorentzFactor = Math.sqrt(1 - velocity ** 2);
+    ageOfJack = numberFormatter.format(twinsage + (2 * distance / velocity) * lorentzFactor);
+    ageOfJill = numberFormatter.format(twinsage + 2 * distance / velocity);
+    return `Jack's age is ${ageOfJack}, Jill's age is ${ageOfJill}`;
+}
+
+/* console.log(twins(20, 10, 0.4));
+console.log(twins(20, 10, 0.8));
+console.log(twins(10, 16.73, 0.999)); */

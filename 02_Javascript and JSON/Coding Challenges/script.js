@@ -714,3 +714,19 @@ console.log(transposeMatrix([
     [5, 6, 7, 8],
     [9, 10, 11, 12]
 ])); */
+
+function isValidHexCode(text) {
+    if (text.length !== 7) { return false };
+    if (text[0] !== "#") { return false };
+    for (let i = 1; i < text.length; i++) {
+        if (!text[i].match(/^[a-f0-9]+$/i)) { return false };
+    }
+    return true;
+}
+
+/* console.log(isValidHexCode("#CD5C5C"));
+console.log(isValidHexCode("#EAECEE"));
+console.log(isValidHexCode("#CD5C58C"));
+console.log(isValidHexCode("#CD5C5Z"));
+console.log(isValidHexCode("#CD5C&C"));
+console.log(isValidHexCode("CD5C5C")); */

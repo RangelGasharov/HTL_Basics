@@ -677,3 +677,40 @@ function twins(twinsage, distance, velocity) {
 /* console.log(twins(20, 10, 0.4));
 console.log(twins(20, 10, 0.8));
 console.log(twins(10, 16.73, 0.999)); */
+
+function transposeMatrix(matrix) {
+    let resultMatrix = [];
+    let rows = matrix[0].length;
+    let cells = matrix.length;
+    for (let i = 0; i < rows; i++) {
+        resultMatrix[i] = [];
+        for (let j = 0; j < cells; j++) {
+            resultMatrix[i][j] = 0;
+        }
+    }
+
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+            resultMatrix[j][i] = matrix[i][j];
+        }
+    }
+    return resultMatrix;
+}
+
+/*console.log(transposeMatrix([
+    [1, 1, 1],
+    [2, 2, 2],
+    [3, 3, 3]
+]));
+
+console.log(transposeMatrix([
+    [5, 5],
+    [6, 7],
+    [9, 1]
+]));
+
+console.log(transposeMatrix([
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12]
+])); */
